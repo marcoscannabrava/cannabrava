@@ -4,7 +4,7 @@ import { animated, useSpring, config } from "react-spring"
 // import { useStaticQuery, graphql } from "gatsby"
 // import useEmiliaConfig from "../hooks/use-emilia-config"
 import HeaderBackground from "./header-background"
-// import SocialMediaList from "./social-media-list"
+import SocialMediaList from "./social-media-list"
 import '../assets/fonts.css'
 import useSiteMetadata from "../hooks/use-site-metadata"
 
@@ -51,7 +51,7 @@ const Header = () => {
         </animated.div>
         <div data-testid="social-header" sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
           <animated.div style={fadeLongProps}>
-            {/* <SocialMediaList /> */}
+            <SocialMediaList />
           </animated.div>
         </div>
       </div>

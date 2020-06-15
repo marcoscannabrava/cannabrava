@@ -5,7 +5,14 @@ import { jsx, Styled } from "theme-ui"
 
 
 const SocialMediaList = () => {
-  const { socialMedia } = useEmiliaConfig()
+  // const { socialMedia } = useEmiliaConfig()
+  const socialMedia = [
+    { title: `Instagram`, href: "https://www.instagram.com/marcoscannabrava/", file: "instagram.png" },
+    { title: `GitHub`, href: "https://github.com/marcoscannabrava", file: "github.png" },
+    { title: `Twitter`, href: "https://twitter.com/mpcannabrava", file: "twitter.png" },
+    { title: `LinkedIn`, href: "https://www.linkedin.com/in/marcos-cannabrava/", file: "linkedin.png" },
+    { title: `Email`, href: "mailto:mpcannabrava@gmail.com", file: "email.png" }
+  ]
 
   return (
     <React.Fragment>
