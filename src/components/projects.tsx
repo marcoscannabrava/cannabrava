@@ -2,53 +2,45 @@
 /* eslint no-shadow: 0 */
 import { jsx, Container, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
-// import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 // import { ChildImageSharpFluid } from "../types"
 import Layout from "./layout"
 import Header from "./header"
-// import Card from "./card"
+import Card from "./card"
 // import AboutMeMDX from "../texts/about-me"
 
-// type Props = {
-//   projects: {
-//     slug: string
-//     title: string
-//     cover: {
-//       childImageSharp: ChildImageSharpFluid
-//     }
-//   }[]
-// }
+type Props = {
+  projects: {
+    banner: string
+    title: string
+    text: string
+    tags: string[]
+    github_link: string
+    website_link: string
+  }[]
+}
 
-// type ProjecsStaticQuery = {
-//   allProject: {
-//     nodes: {
-//       parent: {
-//         fields: {
-//           colorThief: string[]
-//         }
-//       }
-//     }[]
-//   }
-// }
-const Projects = () => {
-// const Projects = ({ projects }: Props) => {
-  // const data = useStaticQuery<ProjecsStaticQuery>(graphql`
-  //   query {
-  //     allProject(sort: { fields: date, order: DESC }) {
-  //       nodes {
-  //         ... on MdxProject {
-  //           parent {
-  //             ... on Mdx {
-  //               fields {
-  //                 colorThief
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+type ProjecsStaticQuery = {
+  allProjectsYaml: {
+    nodes: {}[]
+  }
+}
+// const Projects = () => {
+const Projects = ({ projects }: Props) => {
+  const data = useStaticQuery<ProjecsStaticQuery>(graphql`
+    query {
+      allProjectsYaml {
+        nodes {
+          banner
+          title
+          text
+          tags
+          github_link
+          website_link
+        }
+      }
+    }
+  `)
 
   const fadeUpProps = useSpring({
     config: config.slow,
@@ -80,16 +72,16 @@ const Projects = () => {
               gridColumnGap: 4,
             }}
           >
-            {[150, 200, 300, 200, 150].map((project, index) => {
+            {data.allProjectsYaml.nodes.map((project) => {
               // const val = data.allProject.nodes[index].parent.fields.colorThief
               // const shadow = `${val[0]}, ${val[1]}, ${val[2]}`
 
               const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
               const shadowArray = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
-              // return <Card key={project.slug} item={project} overlay={shadow} shadow={shadowArray} inGrid />
               return (
-                <img src={`https://via.placeholder.com/${project}`} alt=""/>
+                <Card key={project.title} item={project} inGrid />
+                // <img src={`https://via.placeholder.com/${project}`} alt=""/>
               )
             })}
           </Container>

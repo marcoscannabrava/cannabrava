@@ -2,15 +2,15 @@ exports.gatsbyPluginFileSystem = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `images`,
-      path: __dirname + `/../images`,
+      name: `assets`,
+      path: __dirname + `/../../content/assets`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `assets`,
-      path: __dirname + `/../../content/assets`,
+      name: `projects`,
+      path: __dirname + `/../../content/projects`,
     },
   }
 ]
