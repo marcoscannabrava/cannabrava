@@ -1,0 +1,13 @@
+banner: <img 
+          height="210px"
+          width="100%"
+          src="https://raw.githubusercontent.com/marcoscannabrava/goals-tracker/master/images/screenshot-goals-tracker-sheet.png" 
+          class="card-img-top lazy" alt="..." />
+title: googlesheets.png
+text: Open Source Project to build a fully fledged goal tracking solution entirely based in Google products. Help wanted!
+tags: [
+  <i class="devicon-google-plain colored"></i>,
+  <i class="devicon-javascript-plain colored"></i>
+]
+github-link: https://github.com/marcoscannabrava/goals-tracker/
+website-link: https://docs.google.com/spreadsheets/d/1MrdkS6aBCU6Q-snaFygQkoaAri-6_kTrHvZAgO0rmOk/edit#gid=1496453925

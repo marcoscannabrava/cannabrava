@@ -3,31 +3,34 @@
 import { jsx, Container, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
 import { graphql, useStaticQuery } from "gatsby"
-// import { ChildImageSharpFluid } from "../types"
-import Layout from "./layout"
 import Header from "./header"
 import Card from "./card"
+import { random } from "core-js/fn/number"
 // import AboutMeMDX from "../texts/about-me"
 
-type Props = {
-  projects: {
-    banner: string
-    title: string
-    text: string
-    tags: string[]
-    github_link: string
-    website_link: string
-  }[]
+type Project = {
+  banner: string
+  title: string
+  text: string
+  tags: string[]
+  github_link: string
+  website_link: string
 }
 
-type ProjecsStaticQuery = {
+type ProjectsStaticQuery = {
   allProjectsYaml: {
+    nodes: {}[]
+  },
+  allImageSharp: {
+    nodes: {}[]
+  },
+  allFile: {
     nodes: {}[]
   }
 }
-// const Projects = () => {
-const Projects = ({ projects }: Props) => {
-  const data = useStaticQuery<ProjecsStaticQuery>(graphql`
+
+const Projects = ({ projects }: Project[]) => {
+  const projs = useStaticQuery<ProjectsStaticQuery>(graphql`
     query {
       allProjectsYaml {
         nodes {
@@ -37,6 +40,21 @@ const Projects = ({ projects }: Props) => {
           tags
           github_link
           website_link
+        }
+      }
+      allImageSharp {
+        nodes {
+          fluid {
+            originalName
+            src
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      allFile(filter: { extension: { eq: "svg" } }) {
+        nodes {
+          publicURL
+          name
         }
       }
     }
@@ -49,8 +67,10 @@ const Projects = ({ projects }: Props) => {
     to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
   })
 
+  console.log('svgs: ', projs.allFile.nodes)
+
   return (
-    <Layout>
+    <div>
       <Header />
       <Container
         sx={{
@@ -64,30 +84,30 @@ const Projects = ({ projects }: Props) => {
       </Container>
       <Box as="main" variant="layout.main">
         <animated.div style={fadeUpProps}>
-          <Container
+          <div
             sx={{
-              mt: `5rem`,
-              display: `grid`,
-              gridTemplateColumns: [`1fr`, `repeat(auto-fill, minmax(350px, 1fr))`],
-              gridColumnGap: 4,
+              maxWidth: '90vw',
+              margin: '5vw auto'
             }}
           >
-            {data.allProjectsYaml.nodes.map((project) => {
-              // const val = data.allProject.nodes[index].parent.fields.colorThief
-              // const shadow = `${val[0]}, ${val[1]}, ${val[2]}`
+            {projs.allProjectsYaml.nodes.map((project: Project) => {
 
-              const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
-              const shadowArray = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+              let projImg, projTags = undefined;
+              if(projs.allImageSharp.nodes) {
+                projImg = projs.allImageSharp.nodes.find((el) => el.fluid.originalName === project.title)
+              }
+              if(projs.allFile.nodes){
+                projTags = projs.allFile.nodes.filter((el) => project.tags.includes(el.name))
+              }
 
               return (
-                <Card key={project.title} item={project} inGrid />
-                // <img src={`https://via.placeholder.com/${project}`} alt=""/>
+                <Card key={project.title} item={project} img={projImg} tags={projTags} />
               )
             })}
-          </Container>
+          </div>
         </animated.div>
       </Box>
-    </Layout>
+    </div>
   )
 }
 

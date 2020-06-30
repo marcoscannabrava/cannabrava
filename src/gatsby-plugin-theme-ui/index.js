@@ -44,6 +44,7 @@ export default merge(tailwind, {
     },
     main: {
       position: `relative`,
+      height: `100vh`
     },
     header: {
       position: `relative`,

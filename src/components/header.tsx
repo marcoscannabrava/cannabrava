@@ -3,7 +3,6 @@ import { jsx, Heading, Flex } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 // import { useStaticQuery, graphql } from "gatsby"
 // import useEmiliaConfig from "../hooks/use-emilia-config"
-import HeaderBackground from "./header-background"
 import SocialMediaList from "./social-media-list"
 import '../assets/fonts.css'
 import useSiteMetadata from "../hooks/use-site-metadata"
@@ -26,8 +25,13 @@ const Header = () => {
   const fadeLongProps = useSpring({ config: config.slow, delay: 600, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Flex as="header" variant="layout.projectHead" sx={{boxShadow: `0px 5px 5px 0px rgba(0,0,0,0.5)`}}>
-      <HeaderBackground />
+    <Flex as="header" variant="layout.projectHead" 
+      sx={{
+        boxShadow: `0px 5px 5px 0px rgba(0,0,0,0.5)`,
+        backgroundImage: `url(./banner.jpg)`,
+        backgroundSize: `cover`,
+        backgroundPosition: `center`
+        }}>
       <div sx={{ textAlign: `center`, py: 100, zIndex: 10, height: `95vh` }}>
         <animated.div style={fadeUpProps}>
           <Heading variant="styles.h1">{siteTitle}</Heading>

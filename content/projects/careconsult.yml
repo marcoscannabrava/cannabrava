@@ -1,16 +1,17 @@
 banner: <iframe class="card-img-top lazy"
-          height="250px"
+          height="315px"
+          width="100%"
           src="https://www.youtube.com/embed/_SoB3SOyTv4" 
           frameborder="0" 
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
-title: <img src="img/careconsult.svg" class="card-icon" alt="CareConsult Icon" />
-text: A  big calendar where vetted health professional volunteers lay out their availability for free remote consultations. 
+title: careconsult.png
+text: A calendar where vetted health professional volunteers lay out their availability for free remote consultations. 
   Built for DevPost Global COVID-19 Hackathon with my friend <a target="_blank" href="https://www.linkedin.com/in/stu-wood/">Stu Wood</a>.
 tags: [
-  '<i class="devicon-react-original-wordmark colored"></i>',
-  '<img src="img/firebase.png" style="height: 60px;" />',
+  'react',
+  'firebase',
   '<img src="img/gatsby.png" style="height: 50px;" />'
 ]
 github-link: https://github.com/CareConsultApp/careconsult
