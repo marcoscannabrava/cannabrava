@@ -6,13 +6,13 @@ banner: <iframe
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
-title: kitchen.png
+title: cookit.png
 text: A prototype app that allows renting kitchens and restaurants during their idle hours similar to AirBnB.
 tags: [
-  <i class="devicon-rails-plain-wordmark colored"></i>,
-  <i class="devicon-postgresql-plain-wordmark colored"></i>,
-  <i class="devicon-html5-plain-wordmark colored"></i>,
-  <i class="devicon-css3-plain-wordmark colored"></i>
+  'rails',
+  'postgresql',
+  'html5',
+  'css3'
 ]
 github-link: https://github.com/marcoscannabrava/cook-it
 website-link: https://cook-it-330-v2.herokuapp.com/

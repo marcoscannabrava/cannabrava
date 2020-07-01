@@ -8,11 +8,11 @@ banner: <iframe class="card-img-top lazy"
         </iframe>
 title: careconsult.png
 text: A calendar where vetted health professional volunteers lay out their availability for free remote consultations. 
-  Built for DevPost Global COVID-19 Hackathon with my friend <a target="_blank" href="https://www.linkedin.com/in/stu-wood/">Stu Wood</a>.
+  Built for DevPost Global COVID-19 Hackathon with Stu Wood.
 tags: [
   'react',
   'firebase',
-  '<img src="img/gatsby.png" style="height: 50px;" />'
+  'gatsby'
 ]
 github-link: https://github.com/CareConsultApp/careconsult
 website-link: https://ecstatic-leavitt-3a8f13.netlify.com/

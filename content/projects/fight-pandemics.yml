@@ -1,0 +1,12 @@
+banner: <img
+        height="210px"
+        width="100%"
+        src="https://res.cloudinary.com/mpc-cloud/image/upload/v1593634948/marcoscannabrava_github/fightpandemics_cgzuke.png" />
+title: fightpandemics.png
+text: Launched the first landing page and MVP for this COVID-19 Information Aggregator.
+tags: [
+  'react',
+  'gatsby'
+]
+github-link: https://github.com/FightPandemics
+website-link: https://fightpandemics.com/

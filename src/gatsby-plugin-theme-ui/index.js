@@ -43,8 +43,9 @@ export default merge(tailwind, {
       pb: 4,
     },
     main: {
-      position: `relative`,
-      height: `100vh`
+      textAlign: 'center',
+      my: 5,
+      paddingX: [3, 5]
     },
     header: {
       position: `relative`,

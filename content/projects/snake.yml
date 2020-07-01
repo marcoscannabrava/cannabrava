@@ -7,8 +7,8 @@ banner: <iframe
           allowfullscreen>
         </iframe>
 title: snake.png
-text: Another clone of the old snake game because the world doesn't have enough of them! In ~150 lines of Ruby.
+text: Snake game clone in <150 lines of Ruby.
 tags: [
-  '<i class="devicon-ruby-plain-wordmark colored"></i>'
+  'ruby'
 ]
 github-link: https://github.com/marcoscannabrava/snake-game

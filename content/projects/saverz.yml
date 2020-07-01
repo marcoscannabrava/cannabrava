@@ -9,10 +9,11 @@ banner: <iframe
 title: saverz.png
 text: $averZ, a startup that offers discount coupons and donates the affiliate revenue to the user’s choice academic researcher or research field.
 tags: [
-  '<i class="devicon-rails-plain-wordmark colored"></i>',
-  '<i class="devicon-javascript-plain colored"></i>',
-  '<i class="devicon-bootstrap-plain-wordmark colored"></i>',
-  '<i class="devicon-postgresql-plain-wordmark colored"></i>'
+  'rails',
+  'js',
+  'bootstrap',
+  'postgresql',
+  'chrome'
 ]
 github-link: https://github.com/marcoscannabrava/saverz
 website-link: https://www.saverz.org/

@@ -3,7 +3,7 @@ exports.siteMetadata = {
   siteTitleAlt: `Marcos Cannabrava`,
   siteHeadline: `Technology, Education, M&A, Surfing`,
   siteUrl: `https://cannabrava.co`,
-  siteDescription: `Personal Portfolio Page of Marcos Cannabrava - Technology, Education, M&A, Surfing.`,
+  siteDescription: `Personal Portfolio of Marcos Cannabrava - Technology, Education, M&A, Surfing.`,
   siteLanguage: `en`,
   siteImage: `/banner.jpg`,
   author: `marcoscannabrava`
