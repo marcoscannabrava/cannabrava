@@ -63,6 +63,11 @@ export default merge(tailwind, {
       maxWidth: `1600px`,
     },
   },
+  forms: {
+    input: {
+      backgroundColor: `white`
+    }
+  },
   styles: {
     root: {
       color: `text`,

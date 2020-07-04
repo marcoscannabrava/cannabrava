@@ -3,6 +3,7 @@ const { gatsbyPluginManifest } = require('./src/config/manifest');
 const { gatsbyPluginFileSystem } = require('./src/config/filesystem');
 
 module.exports = {
+  pathPrefix: "/cannabrava",
   siteMetadata: siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,

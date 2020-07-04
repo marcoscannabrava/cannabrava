@@ -22,8 +22,11 @@ type CardProps = {
 const Card = ({ item, img, tags }: CardProps) => {
 
   const styles = {
-    links: {display: 'flex', justifyContent: 'space-between'},
-    textMuted: {fontSize: 0, color: 'textMuted'},
+    links: {display: 'flex', justifyContent: 'space-around'},
+    textMuted: {
+      fontSize: 1, color: 'textMuted', margin: '1em 0 0.5em 0', 
+      "&:hover": { transform: `scale(1.3)`, transition: `all .2s ease-in-out` }
+    },
     gridItem: {maxWidth: '400px', padding: '1rem'},
     card: {
       backgroundColor: '#ffffff',
@@ -41,27 +44,42 @@ const Card = ({ item, img, tags }: CardProps) => {
     : 
     item.title;
   
+
+  function ExternalLink(props) {
+    if (props.type === 'github' && props.link) {
+      return (
+        <a sx={styles.textMuted} target="_blank" href={props.link} className="card-text">
+          <small className="text-muted"><FontAwesomeIcon icon={['fab', 'github']} />GitHub</small>
+        </a>
+      )
+    } else if (props.type === 'website' && props.link) {
+      return (
+        <a sx={styles.textMuted} target="_blank" href={props.link} className="card-text">
+          <small className="text-muted"><FontAwesomeIcon icon='external-link-alt' />Website</small>
+        </a>
+      )
+    } else {
+      return null
+    }
+  }
+
   return (
     <div className="grid-item" sx={styles.gridItem}>
       <div className="card" sx={styles.card}>
         <div sx={{paddingTop: '1rem'}} dangerouslySetInnerHTML={{__html: item.banner}} />
-        <div className="card-body" sx={{padding: '0.5rem 1rem 0.75rem 1rem'}}>
+        <div className="card-body" sx={{padding: '0.5rem 1rem 0.75rem 1rem', borderTop: '1px solid rgba(0,0,0,0.3)'}}>
           <h5 className="card-title" sx={{margin: '0'}}>
             {titleImage}
           </h5>
           <div className="card-text">
-            <p sx={{marginBottom: '1.5em', textAlign: 'justify'}}>{item.text}</p>
+            <p sx={{textAlign: 'justify'}}>{item.text}</p>
             {tags.map((tag) => {
               return <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} /> 
             })}
           </div>
           <div className="card-links" sx={styles.links}>
-            <a sx={styles.textMuted} target="_blank" href={item.github_link} className="card-text">
-              <small className="text-muted"><FontAwesomeIcon icon={['fab', 'github']} /> Click to go to GitHub repo</small>
-            </a>
-            <a sx={styles.textMuted} target="_blank" href={item.website_link} className="card-text">
-              <small className="text-muted"><FontAwesomeIcon icon='external-link-alt' /> Click to go to Website</small>
-            </a>
+           <ExternalLink type='github' link={item.github_link} />
+           <ExternalLink type='website' link={item.website_link} />
           </div>
         </div>
       </div>

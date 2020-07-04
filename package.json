@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
+    "gh-pages": "^3.1.0",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -40,10 +41,11 @@
     "build": "gatsby build",
     "dev": "env-cmd gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",

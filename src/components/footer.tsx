@@ -1,26 +1,26 @@
 /** @jsx jsx */
 import { Box, jsx, Container, Flex, Link, useColorMode } from "theme-ui"
-import useEmiliaConfig from "../hooks/use-emilia-config.bkp"
-import SocialMediaList from "./social-media-list.bkp"
-import ColorModeToggle from "./colormode-toggle"
+// import useEmiliaConfig from "../hooks/use-emilia-config.bkp"
+// import SocialMediaList from "./social-media-list.bkp"
+// import ColorModeToggle from "./colormode-toggle"
 // @ts-ignore
 // import AboutMeMDX from "../texts/about-me"
 
 const Footer = () => {
-  const { showThemeAuthor } = useEmiliaConfig()
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
-  const toggleColorMode = (e: any) => {
-    e.preventDefault()
-    setColorMode(isDark ? `light` : `dark`)
-  }
+  // const { showThemeAuthor } = useEmiliaConfig()
+  // const [colorMode, setColorMode] = useColorMode()
+  // const isDark = colorMode === `dark`
+  // const toggleColorMode = (e: any) => {
+  //   e.preventDefault()
+  //   setColorMode(isDark ? `light` : `dark`)
+  // }
 
   return (
     <Box
       as="footer"
       variant="layout.footer"
       sx={{
-        background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, ${isDark ? `0.35` : `0.15`}) 100%)`,
+        background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .35) 100%)`,
       }}
     >
       <Container>
@@ -35,7 +35,7 @@ const Footer = () => {
             }}
           >
           </div>
-          <Flex
+          {/* <Flex
             sx={{
               textAlign: [`center`, `center`, `center`, `right`],
               flexDirection: `column`,
@@ -49,10 +49,10 @@ const Footer = () => {
               </div>
               <div sx={{ color: `textMuted` }}>Copyright &copy; {new Date().getFullYear()}. All rights reserved.</div>
             </div>
-          </Flex>
+          </Flex> */}
         </div>
       </Container>
-      {showThemeAuthor && (
+      {/* {'showThemeAuthor' && (
         <Container
           sx={{
             display: `flex`,
@@ -79,7 +79,7 @@ const Footer = () => {
             LekoArts
           </Link>
         </Container>
-      )}
+      )} */}
     </Box>
   )
 }

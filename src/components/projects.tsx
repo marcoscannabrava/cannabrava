@@ -1,12 +1,14 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
+import {useState} from 'react'
 import { jsx, Container, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
-import { graphql, useStaticQuery } from "gatsby"
 import Header from "./header"
+import Footer from "./footer"
 import Card from "./card"
 import AboutMe from "./about"
 import useProjectsData from "../hooks/use-projects-data"
+
 
 type Project = {
   banner: string
@@ -18,6 +20,8 @@ type Project = {
 }
 
 const Projects = ({ projects }: Project[]) => {
+
+  const [tags, setTags] = useState()
 
   const projs = useProjectsData()
 
@@ -36,6 +40,13 @@ const Projects = ({ projects }: Project[]) => {
       </Box>
       <Box as="main" variant="layout.main">
         <h1>Projects</h1>
+        {/* <Input defaultValue='tech stack:' /> */}
+        <Container>
+          {projs.allFile.nodes.map((tag) => {
+            return (
+              <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} />
+            )})}
+        </Container>
         <animated.div style={fadeUpProps} sx={{
           maxWidth: '100vw',
           display: 'flex',
@@ -61,6 +72,7 @@ const Projects = ({ projects }: Project[]) => {
           })}
         </animated.div>
       </Box>
+      <Footer />
     </div>
   )
 }
