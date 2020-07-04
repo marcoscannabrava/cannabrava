@@ -40,7 +40,6 @@ const Projects = ({ projects }: Project[]) => {
       </Box>
       <Box as="main" variant="layout.main">
         <h1>Projects</h1>
-        {/* <Input defaultValue='tech stack:' /> */}
         <Container>
           {projs.allFile.nodes.map((tag) => {
             return (
