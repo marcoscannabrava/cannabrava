@@ -21,7 +21,7 @@ type Project = {
 
 const Projects = ({ projects }: Project[]) => {
 
-  const [on, toggle] = useState(false); // change to false
+  const [on, toggle] = useState(true); // change to false
   const [tags, setTags] = useState(null);
   const aboutContainer = useRef(null);
   const tagsContainer = useRef(null);
@@ -37,17 +37,21 @@ const Projects = ({ projects }: Project[]) => {
 
   const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } });
   
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => toggle(entry.isIntersecting));
-    });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(handleIntersection);
 
-    const observerEntries = [aboutContainer.current, tagsContainer.current, projectsContainer.current];
+  //   function handleIntersection(entries, observer) {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) toggle(!on);
+  //     });
+  //   }
 
-    observerEntries.forEach(div => observer.observe(div));
+  //   const observerEntries = [aboutContainer.current, tagsContainer.current, projectsContainer.current];
 
-    return () => observerEntries.map((entry) => observer.unobserve(entry));
-  });
+  //   observerEntries.map(div => observer.observe(div));
+
+  //   return () => observerEntries.map(div => observer.unobserve(div));
+  // });
 
   return (
     <div>
