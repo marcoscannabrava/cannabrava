@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
-import {useState} from 'react'
-import { jsx, Container, Box } from "theme-ui"
+import { useState, useEffect, useRef } from 'react'
+import { jsx, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
 import Header from "./header"
 import Footer from "./footer"
@@ -21,32 +21,51 @@ type Project = {
 
 const Projects = ({ projects }: Project[]) => {
 
-  const [tags, setTags] = useState()
-
-  const projs = useProjectsData()
+  const [on, toggle] = useState(false); // change to false
+  const [tags, setTags] = useState(null);
+  const aboutContainer = useRef(null);
+  const tagsContainer = useRef(null);
+  const projectsContainer = useRef(null);
+  const projs = useProjectsData();
 
   const fadeUpProps = useSpring({
     config: config.slow,
-    delay: 600,
+    delay: 500,
     from: { opacity: 0, transform: `translate3d(0, 30px, 0)` },
-    to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
-  })
+    to: on ? { opacity: 1, transform: `translate3d(0, 0, 0)` } : undefined,
+  });
+
+  const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } });
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => toggle(entry.isIntersecting));
+    });
+
+    const observerEntries = [aboutContainer.current, tagsContainer.current, projectsContainer.current];
+
+    observerEntries.forEach(div => observer.observe(div));
+
+    return () => observerEntries.map((entry) => observer.unobserve(entry));
+  });
 
   return (
     <div>
       <Header />
       <Box as="main" variant="layout.main">
-        <AboutMe />
+        <animated.div ref={aboutContainer} style={fadeUpProps}>
+          <AboutMe />
+        </animated.div>
       </Box>
       <Box as="main" variant="layout.main">
         <h1>Projects</h1>
-        <Container>
+        <animated.div ref={tagsContainer} style={fadeUpProps}>
           {projs.allFile.nodes.map((tag) => {
             return (
               <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} />
             )})}
-        </Container>
-        <animated.div style={fadeUpProps} sx={{
+        </animated.div>
+        <animated.div ref={projectsContainer} style={fadeUpProps} sx={{
           maxWidth: '100vw',
           display: 'flex',
           flexDirection: 'column',

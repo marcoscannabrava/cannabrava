@@ -9,4 +9,4 @@ Growth & Operations Leader for 5 years.
 Developer for 3 years.
 
 
-### <a class="grow" href="https://docs.google.com/document/d/1M6Dzca51l6znFsI42IgX4qqEJN7VgImgNTWHhVYLItg/edit?usp=sharing" target="_blank">📎**CV**📑</a>
+### <a href="https://docs.google.com/document/d/1M6Dzca51l6znFsI42IgX4qqEJN7VgImgNTWHhVYLItg/edit?usp=sharing" target="_blank">&nbsp;Curriculum Vitae&nbsp;</a>

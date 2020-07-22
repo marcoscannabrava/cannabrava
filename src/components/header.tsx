@@ -21,7 +21,7 @@ const Header = () => {
     from: { opacity: 0, transform: `translate3d(0, 30px, 0)` },
     to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
   })
-  const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } })
+  
   const fadeLongProps = useSpring({ config: config.slow, delay: 600, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
