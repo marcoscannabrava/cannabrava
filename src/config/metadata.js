@@ -6,5 +6,5 @@ exports.siteMetadata = {
   siteDescription: `Personal Portfolio of Marcos Cannabrava - Technology, Education, M&A, Surfing.`,
   siteLanguage: `en`,
   siteImage: `/banner.jpg`,
-  author: `marcoscannabrava`
+  author: `MPCannabrava`
 }
