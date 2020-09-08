@@ -1,11 +1,12 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
+import theme from '../gatsby-plugin-theme-ui'
 import { jsx, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
 import Header from "./header"
 import Footer from "./footer"
-import Card from "./card"
+import ProjectCard from "./ProjectCard"
 import AboutMe from "./about"
 import useProjectsData from "../hooks/use-projects-data"
 
@@ -14,7 +15,10 @@ type Project = {
   banner: string
   title: string
   text: string
-  tags: string[]
+  tags: {
+    publicURL: string,
+    name: string
+  }[]
   github_link: string
   website_link: string
 }
@@ -36,7 +40,7 @@ const Projects = ({ projects }: Project[]) => {
   });
 
   const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } });
-  
+
   // useEffect(() => {
   //   const observer = new IntersectionObserver(handleIntersection);
 
@@ -62,11 +66,21 @@ const Projects = ({ projects }: Project[]) => {
         </animated.div>
       </Box>
       <Box as="main" variant="layout.main">
-        <h1>Projects</h1>
-        <animated.div ref={tagsContainer} style={fadeUpProps}>
+        <h1>&lt; &lt; &nbsp; Projects &nbsp; &gt; &gt;</h1>
+        <animated.div ref={tagsContainer} style={fadeUpProps}
+          sx={{
+            display: 'flex',
+            maxWidth: ['90%', '60%'], 
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            "> *": {margin: '.5em'}
+          }}>
           {projs.allFile.nodes.map((tag) => {
             return (
-              <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} />
+              <div sx={theme.tooltipBox}>
+                <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} />
+                <div sx={theme.tooltip}>{tag.name}</div>
+              </div>
             )})}
         </animated.div>
         <animated.div ref={projectsContainer} style={fadeUpProps} sx={{
@@ -89,7 +103,7 @@ const Projects = ({ projects }: Project[]) => {
             }
 
             return (
-              <Card key={project.title} item={project} img={projImg} tags={projTags} />
+              <ProjectCard key={project.title} item={project} img={projImg} tags={projTags} />
             )
           })}
         </animated.div>

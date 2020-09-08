@@ -30,6 +30,23 @@ export default merge(tailwind, {
       },
     },
   },
+  tooltip: {
+    display: 'none',
+    position: 'absolute',
+    boxShadow: '2px 2px 4px 2px rgba(0,0,0,0.2)',
+    zIndex: '1',
+    background: 'white',
+    padding: '0em 0.1em',
+    top: '0',
+    right: '0',
+    transform: 'translate(50%, -50%)'
+  },
+  tooltipBox: {
+    position: 'relative',
+    "&:hover": {
+      "> *": {display: 'block'}
+    }
+  },
   fonts: {
     body: "'Nunito', sans-serif",
     heading: "'Oswald', sans-serif",
@@ -44,6 +61,7 @@ export default merge(tailwind, {
     },
     main: {
       textAlign: 'center',
+      textAlign: '-webkit-center',
       my: 5,
       paddingX: [3, 5]
     },

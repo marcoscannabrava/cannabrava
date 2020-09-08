@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-// import { useStaticQuery, graphql } from "gatsby"
+import theme from '../gatsby-plugin-theme-ui'
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -19,7 +19,7 @@ type CardProps = {
   tags: {}[]
 }
 
-const Card = ({ item, img, tags }: CardProps) => {
+const ProjectCard = ({ item, img, tags }: CardProps) => {
 
   const styles = {
     links: {display: 'flex', justifyContent: 'space-around'},
@@ -73,9 +73,21 @@ const Card = ({ item, img, tags }: CardProps) => {
           </h5>
           <div className="card-text">
             <p sx={{textAlign: 'justify'}}>{item.text}</p>
-            {tags.map((tag) => {
-              return <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} /> 
-            })}
+            <div sx={{
+              placeContent: 'center',
+              display: 'flex',
+              maxWidth: '100%', 
+              flexWrap: 'wrap',
+              "> *": {margin: '.1em'}
+            }}>
+              {tags.map((tag) => {
+                return (
+                  <div sx={theme.tooltipBox}>
+                    <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} />
+                    <div sx={theme.tooltip}>{tag.name}</div>
+                  </div>
+                )})}
+            </div>
           </div>
           <div className="card-links" sx={styles.links}>
            <ExternalLink type='github' link={item.github_link} />
@@ -87,4 +99,4 @@ const Card = ({ item, img, tags }: CardProps) => {
   )
 }
 
-export default Card
+export default ProjectCard

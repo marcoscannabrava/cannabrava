@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Heading, Flex } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 // import { useStaticQuery, graphql } from "gatsby"
 // import useEmiliaConfig from "../hooks/use-emilia-config"
@@ -25,19 +25,19 @@ const Header = () => {
   const fadeLongProps = useSpring({ config: config.slow, delay: 600, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Flex as="header" variant="layout.projectHead" 
+    <div
       sx={{
         boxShadow: `0px 5px 5px 0px rgba(0,0,0,0.5)`,
-        backgroundImage: `url(./banner.jpg)`,
+        backgroundImage: `url(https://res.cloudinary.com/mpc-cloud/image/upload/c_scale,w_1808/v1585134904/marcoscannabrava_github/surf_rbypcn.jpg)`,
         backgroundSize: `cover`,
         backgroundPosition: `center`
         }}>
       <div sx={{ textAlign: `center`, py: 100, zIndex: 10, height: `95vh` }}>
         <animated.div style={fadeUpProps}>
-          <Heading variant="styles.h1">{siteTitle}</Heading>
+          <Styled.h1>{siteTitle}</Styled.h1>
         </animated.div>
         <animated.div style={fadeUpPropsDelay}>
-          <Flex
+          <div
             sx={{
               svg: {
                 width: `20px`,
@@ -51,7 +51,7 @@ const Header = () => {
               color: `text`,
             }}
           >
-          </Flex>
+          </div>
         </animated.div>
         <div data-testid="social-header" sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
           <animated.div style={fadeLongProps}>
@@ -59,7 +59,7 @@ const Header = () => {
           </animated.div>
         </div>
       </div>
-    </Flex>
+    </div>
   )
 }
 
