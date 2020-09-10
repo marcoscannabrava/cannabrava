@@ -25,8 +25,7 @@ type Project = {
 
 const Projects = ({ projects }: Project[]) => {
 
-  const [on, toggle] = useState(true); // change to false
-  const [tags, setTags] = useState(null);
+  const [on, toggle] = useState(false);
   const aboutContainer = useRef(null);
   const tagsContainer = useRef(null);
   const projectsContainer = useRef(null);
@@ -34,28 +33,28 @@ const Projects = ({ projects }: Project[]) => {
 
   const fadeUpProps = useSpring({
     config: config.slow,
-    delay: 500,
+    delay: 300,
     from: { opacity: 0, transform: `translate3d(0, 30px, 0)` },
     to: on ? { opacity: 1, transform: `translate3d(0, 0, 0)` } : undefined,
   });
 
   const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } });
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(handleIntersection);
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection);
 
-  //   function handleIntersection(entries, observer) {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) toggle(!on);
-  //     });
-  //   }
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) toggle(true);
+      });
+    }
 
-  //   const observerEntries = [aboutContainer.current, tagsContainer.current, projectsContainer.current];
+    const observerEntries = [aboutContainer.current];
 
-  //   observerEntries.map(div => observer.observe(div));
+    observerEntries.map(div => observer.observe(div));
 
-  //   return () => observerEntries.map(div => observer.unobserve(div));
-  // });
+    return () => observerEntries.map(div => observer.unobserve(div));
+  }, []);
 
   return (
     <div>
@@ -69,8 +68,8 @@ const Projects = ({ projects }: Project[]) => {
         <div sx={{...theme.tooltipBox, width: 'fit-content'}}>
           <h1>&laquo; &nbsp; &nbsp; Projects &nbsp; &nbsp; &raquo;</h1>
           <div sx={theme.tooltip}>
-            scroll sideways down there to see more projects 😜 <br/>
-            hover/click tech icons if you don't know what it is 👍
+            scroll projects section sideways to see more 😜 <br/>
+            hover/click icons if you don't know what they are 👍
           </div>
         </div>
         <animated.div ref={tagsContainer} style={fadeUpProps}
@@ -78,13 +77,19 @@ const Projects = ({ projects }: Project[]) => {
             display: 'flex',
             maxWidth: ['90%', '60%'], 
             flexWrap: 'wrap',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             "> *": {margin: '.5em'}
           }}>
           {projs.allFile.nodes.map((tag) => {
             return (
               <div sx={theme.tooltipBox}>
-                <img key={tag.publicURL} sx={{height: '40px', marginRight: '12px'}} src={tag.publicURL} alt={tag.name} />
+                <img key={tag.publicURL} sx={{
+                  height: '40px', 
+                  marginRight: '12px',
+                  transition: `all .2s ease-in-out`,
+                  "&:hover": { transform: `scale(1.5)` }
+                  }} src={tag.publicURL} alt={tag.name}
+                />
                 <div sx={theme.tooltip}>{tag.name}</div>
               </div>
             )})}
