@@ -39,11 +39,13 @@ export default merge(tailwind, {
     padding: '0em 0.1em',
     top: '0',
     right: '0',
-    transform: 'translate(50%, -50%)'
+    transform: 'translate(75%, -50%)'
   },
   tooltipBox: {
     position: 'relative',
     "&:hover": {
+      transitionDelay: '1000',
+      transitionProperty: 'display',
       "> *": {display: 'block'}
     }
   },
