@@ -16,8 +16,9 @@ text: Shine Registry hosts profiles of businesses and their founders with weddin
 tags: [
   'react',
   'rails',
-  'google',
-  'node'
+  'node',
+  'ts',
+  'foundation'
 ]
 github-link: https://github.com/shineregistry
 website-link: https://www.shineregistry.com/

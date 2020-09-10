@@ -66,7 +66,13 @@ const Projects = ({ projects }: Project[]) => {
         </animated.div>
       </Box>
       <Box as="main" variant="layout.main">
-        <h1>&lt; &lt; &nbsp; Projects &nbsp; &gt; &gt;</h1>
+        <div sx={{...theme.tooltipBox, width: 'fit-content'}}>
+          <h1>&laquo; &nbsp; &nbsp; Projects &nbsp; &nbsp; &raquo;</h1>
+          <div sx={theme.tooltip}>
+            scroll sideways down there to see more projects 😜 <br/>
+            hover/click tech icons if you don't know what it is 👍
+          </div>
+        </div>
         <animated.div ref={tagsContainer} style={fadeUpProps}
           sx={{
             display: 'flex',

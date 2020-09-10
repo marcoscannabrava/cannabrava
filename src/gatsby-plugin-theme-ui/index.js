@@ -60,7 +60,6 @@ export default merge(tailwind, {
       pb: 4,
     },
     main: {
-      textAlign: 'center',
       textAlign: '-webkit-center',
       my: 5,
       paddingX: [3, 5]
