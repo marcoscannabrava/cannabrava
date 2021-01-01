@@ -1,14 +1,13 @@
 /** @jsx jsx */
-/* eslint no-shadow: 0 */
 import React, { useState, useEffect, useRef, Fragment } from 'react'
 import theme from '../gatsby-plugin-theme-ui'
 import { jsx, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./Header"
+import Footer from "./Footer"
 import ProjectCard from "./ProjectCard"
-import AboutMe from "./about"
-import useProjectsData from "../hooks/use-projects-data"
+import AboutMe from "./About"
+import useProjectsData from "../hooks/useProjectsData"
 
 
 type Project = {

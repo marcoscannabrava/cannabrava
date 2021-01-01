@@ -19,5 +19,12 @@ exports.gatsbyPluginFileSystem = [
       name: `about`,
       path: __dirname + `/../../content/about`,
     },
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `notes`,
+      path: __dirname + `/../../content/notes`,
+    }
   }
 ]

@@ -1,0 +1,3 @@
+- https://betterexplained.com/articles/adept-method/
+- https://vasilishynkarenka.com/learning/
+- https://www.gwern.net/Spaced-repetition

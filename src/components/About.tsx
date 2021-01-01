@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import useAboutData from "../hooks/use-about-data"
+import useAboutData from "../hooks/useAboutData"
 
-const Card = () => {
+const About = () => {
 
   const about = useAboutData().markdownRemark.html
 
@@ -11,4 +11,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default About

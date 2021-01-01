@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx, Styled } from "theme-ui"
-// import useEmiliaConfig from "../hooks/use-emilia-config.bkp"
 
 
 const SocialMediaList = () => {
-  // const { socialMedia } = useEmiliaConfig()
+
   const socialMedia = [
     { title: `Instagram`, href: "https://www.instagram.com/marcoscannabrava/", file: "instagram.png" },
     { title: `GitHub`, href: "https://github.com/marcoscannabrava", file: "github3.png" },

@@ -39,7 +39,7 @@ export default merge(tailwind, {
     padding: '0em 0.1em',
     top: '0',
     right: '0',
-    transform: 'translate(75%, -50%)'
+    transform: 'translate(25%, -100%)'
   },
   tooltipBox: {
     position: 'relative',
@@ -81,6 +81,23 @@ export default merge(tailwind, {
       py: [2, 3],
       maxWidth: `1600px`,
     },
+    wiki: {
+      display: 'grid',
+      minHeight: '80vh',
+      margin: '2rem',
+      gridTemplateAreas: [
+        '"header" "nav" "main" "ads" "footer"',
+        '"header header header" "nav main ads" "footer footer footer"'
+      ],
+      gridTemplateColumns: [
+        '1fr',
+        '20rem 1fr 10rem'
+      ],
+      gridTemplateRows: [
+        'min-content min-content 1fr min-content min-content',
+        'min-content 1fr min-content'
+      ]
+    }
   },
   forms: {
     input: {

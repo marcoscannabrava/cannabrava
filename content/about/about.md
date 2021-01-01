@@ -1,5 +1,5 @@
 # About Me
-Latinx Software Engineer volunteering against COVID-19. 
+Software Engineer, Surfer, Trail Runner, Reader. 
 
 Helped build K12 schools for 150k students. 
 

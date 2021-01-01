@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
-// import { useStaticQuery, graphql } from "gatsby"
-// import useEmiliaConfig from "../hooks/use-emilia-config"
-import SocialMediaList from "./social-media-list"
+import SocialMediaList from "./SocialMediaList"
 import '../assets/fonts.css'
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const Header = () => {
   const { siteTitle } = useSiteMetadata()

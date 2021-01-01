@@ -1,6 +1,6 @@
 import React from "react"
-import Projects from "../components/projects"
-import SEO from "../components/seo.tsx"
+import Projects from "../components/Projects"
+import SEO from "../components/SEO.tsx"
 
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
