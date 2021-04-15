@@ -48,13 +48,13 @@ const ProjectCard = ({ item, img, tags }: CardProps) => {
   function ExternalLink(props) {
     if (props.type === 'github' && props.link) {
       return (
-        <a sx={styles.textMuted} target="_blank" href={props.link} className="card-text">
+        <a sx={styles.textMuted} target="_blank" rel="noreferrer" href={props.link} className="card-text">
           <small className="text-muted"><FontAwesomeIcon icon={['fab', 'github']} />GitHub</small>
         </a>
       )
     } else if (props.type === 'website' && props.link) {
       return (
-        <a sx={styles.textMuted} target="_blank" href={props.link} className="card-text">
+        <a sx={styles.textMuted} target="_blank" rel="noreferrer" href={props.link} className="card-text">
           <small className="text-muted"><FontAwesomeIcon icon='external-link-alt' />Website</small>
         </a>
       )
