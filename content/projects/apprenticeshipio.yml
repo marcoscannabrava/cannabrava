@@ -3,11 +3,11 @@ banner: <img
         width="100%"
         src="https://res.cloudinary.com/mpc-cloud/image/upload/v1594250886/marcoscannabrava_github/ApprenticeshipIo_obc6uj.png" />
 title: apprenticeshipio.png
-text: Designed the software architecture with Ruby on Rails, microservices and 3rd party APIs.
+text: Designed the software architecture with Ruby on Rails, microservices and 3rd party APIs for this non-profit that creates opportunity for more people to break into the tech industry in the US.
 tags: [
   'ruby',
   'rails',
-  'js',
+  'javascript',
   'airtable'
 ]
 github-link: https://github.com/apprenticeshipio/apprenticeshipio

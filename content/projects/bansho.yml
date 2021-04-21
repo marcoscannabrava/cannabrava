@@ -1,0 +1,12 @@
+banner: <img
+        width="100%"
+        src="https://res.cloudinary.com/mpc-cloud/image/upload/v1619026242/marcoscannabrava_github/bansho_erit2u.png" />
+title: bansho.png
+text: Built a webapp that connects kids to tutors and set up analytics and an experiments pipeline on the landing page increasing conversion by more than 100%.
+tags: [
+  'react',
+  'nextjs',
+  'typescript',
+  'tailwind'
+]
+website-link: https://www.bansho.com/

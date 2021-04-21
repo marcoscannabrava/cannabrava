@@ -1,7 +1,5 @@
 # About Me
-Latinx Software Engineer volunteering against COVID-19. 
-
-Helped build K12 schools for 150k students. 
+Latinx Software Engineer who built K12 schools for 150k students and software for many more people. 
 
 Growth & Operations Leader for 5 years.
 &nbsp;
