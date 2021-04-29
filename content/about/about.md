@@ -1,5 +1,7 @@
 # About Me
-Engineer who built K12 schools for 150k students and hacker building software for millions. See you in the water at 6am.
+Engineer who built K12 schools for 150k students and hacker building software for millions.
+
+🌊Surfer, ⛰hiker, ⚡runner, 🌴granola-crunching tree hugger.
 
 Growth & Operations Leader for 5 years.
 &nbsp;
