@@ -202,6 +202,11 @@ blockquote {
   margin-bottom: var(--spacing-8);
 }
 
+table td, table th {
+  padding-right: var(--spacing-6);
+  padding-bottom: var(--spacing-2);
+}
+
 blockquote > :last-child {
   margin-bottom: var(--spacing-0);
 }

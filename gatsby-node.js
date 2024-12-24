@@ -109,6 +109,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       linkedin: String
       github: String
       email: String
+      curriculum: String
     }
 
     type MarkdownRemark implements Node {

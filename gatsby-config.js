@@ -21,7 +21,8 @@ module.exports = {
       instagram: `https://www.instagram.com/marcoscannabrava/`,
       github: `https://github.com/marcoscannabrava`,
       linkedin: `https://www.linkedin.com/in/marcos-cannabrava/`,
-      email: `mailto:mpcannabrava@gmail.com`
+      email: `mailto:mpcannabrava@gmail.com`,
+      curriculum: `https://docs.google.com/document/d/1lXcI_M8pWUToUs8XuOyZHeILpFZ268w1XqBtXyD9zE0/edit`
     },
   },
   plugins: [
