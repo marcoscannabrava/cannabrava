@@ -11,7 +11,7 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -47,7 +47,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #001847;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -64,7 +64,7 @@
 }
 
 html {
-  background-color: #cbcbcb;
+  background-color: #dadada;
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
@@ -174,6 +174,7 @@ ol {
 ul li,
 ol li {
   padding-left: var(--spacing-0);
+  margin-left: var(--spacing-6);
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
@@ -192,8 +193,8 @@ li > ul {
 
 blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
+  margin: var(--spacing-0);
+  /* margin-left: var(--spacing-0); */
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
   font-size: var(--fontSize-2);
@@ -282,6 +283,7 @@ a:focus {
 
 .bio {
   display: flex;
+  align-items: center;
   margin-bottom: var(--spacing-16);
 }
 
@@ -311,6 +313,17 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+}
+
+.social-media-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 /* Media queries */

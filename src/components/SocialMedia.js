@@ -1,23 +1,45 @@
 import React from 'react';
+import { useStaticQuery, graphql } from "gatsby"
 import LinkedInIcon from "/assets/linkedin.svg"
 import GitHubIcon from "/assets/github.svg"
 import InstagramIcon from "/assets/instagram.svg"
 import XIcon from "/assets/xtwitter.svg"
+import Email from "/assets/email.svg"
 
-const SocialMedia = () => {
+const SocialMedia = ({ size = 32 }) => {
+  const data = useStaticQuery(graphql`
+      query SocialQuery {
+        site {
+          siteMetadata {
+            social {
+              xtwitter
+              instagram
+              linkedin
+              github
+              email
+            }
+          }
+        }
+      }
+    `)
+
+    const social = data.site.siteMetadata?.social
   return (
-    <div className="social-icons">
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-        <LinkedInIcon style={{ height: '32px' }} alt="LinkedIn" />
+    <div className="social-media">
+      <a className="social-media-icon" href={social.linkedin} target="_blank" rel="noopener noreferrer">
+        <LinkedInIcon style={{ height: `${size}px` }} alt="LinkedIn" />
       </a>
-      <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
-        <GitHubIcon style={{ height: '32px' }} alt="GitHub" />
+      <a className="social-media-icon" href={social.github} target="_blank" rel="noopener noreferrer">
+        <GitHubIcon style={{ height: `${size}px` }} alt="GitHub" />
       </a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-        <InstagramIcon style={{ height: '32px' }} alt="Instagram" />
+      <a className="social-media-icon" href={social.instagram} target="_blank" rel="noopener noreferrer">
+        <InstagramIcon style={{ height: `${size}px` }} alt="Instagram" />
       </a>
-      <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
-        <XIcon style={{ height: '32px' }} alt="X" />
+      <a className="social-media-icon" href={social.xtwitter} target="_blank" rel="noopener noreferrer">
+        <XIcon style={{ height: `${size}px` }} alt="X" />
+      </a>
+      <a className="social-media-icon" href={social.email} target="_blank" rel="noopener noreferrer">
+        <Email style={{ height: `${size}px` }} alt="X" />
       </a>
     </div>
   );

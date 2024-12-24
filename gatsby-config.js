@@ -17,7 +17,11 @@ module.exports = {
     description: `Software Engineer`,
     siteUrl: `https://cannabrava.co/`,
     social: {
-      twitter: `cannabrav`,
+      xtwitter: `https://x.com/cannabrav`,
+      instagram: `https://www.instagram.com/marcoscannabrava/`,
+      github: `https://github.com/marcoscannabrava`,
+      linkedin: `https://www.linkedin.com/in/marcos-cannabrava/`,
+      email: `mailto:mpcannabrava@gmail.com`
     },
   },
   plugins: [
