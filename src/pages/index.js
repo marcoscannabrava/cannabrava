@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Meta from "../components/meta"
-import Tech from "../components/tech"
 import GameOfLife from "../components/GameOfLife"
 
 const BlogIndex = ({ data, location }) => {
