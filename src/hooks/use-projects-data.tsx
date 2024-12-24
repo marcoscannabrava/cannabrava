@@ -25,15 +25,14 @@ const useProjectsData = () => {
         website_link
       }
     }
-    allImageSharp {
-      nodes {
-        fluid {
-          originalName
-          src
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
+    # allImageSharp {
+    #   nodes {
+    #     fluid {
+    #       originalName
+    #       src
+    #     }
+    #   }
+    # }
     allFile(filter: { extension: { eq: "svg" } }) {
       nodes {
         publicURL

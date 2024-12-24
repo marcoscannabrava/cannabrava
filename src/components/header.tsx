@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 // import { useStaticQuery, graphql } from "gatsby"
 // import useEmiliaConfig from "../hooks/use-emilia-config"
@@ -33,10 +33,10 @@ const Header = () => {
         backgroundPosition: `center`
         }}>
       <div sx={{ textAlign: `center`, py: 100, zIndex: 10, height: `95vh` }}>
-        <animated.div style={fadeUpProps}>
+        {/* <animated.div style={fadeUpProps}>
           <Styled.h1>{siteTitle}</Styled.h1>
         </animated.div>
-        <animated.div style={fadeUpPropsDelay}>
+        <animated.div style={fadeUpPropsDelay}> */}
           <div
             sx={{
               svg: {
@@ -52,11 +52,11 @@ const Header = () => {
             }}
           >
           </div>
-        </animated.div>
+        {/* </animated.div> */}
         <div data-testid="social-header" sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
-          <animated.div style={fadeLongProps}>
-            <SocialMediaList />
-          </animated.div>
+          <SocialMediaList />
+          {/* <animated.div style={fadeLongProps}>
+          </animated.div> */}
         </div>
       </div>
     </div>

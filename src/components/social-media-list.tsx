@@ -1,11 +1,7 @@
-/** @jsx jsx */
 import React from "react"
-import { jsx, Styled } from "theme-ui"
-// import useEmiliaConfig from "../hooks/use-emilia-config.bkp"
 
 
 const SocialMediaList = () => {
-  // const { socialMedia } = useEmiliaConfig()
   const socialMedia = [
     { title: `Instagram`, href: "https://www.instagram.com/marcoscannabrava/", file: "instagram.png" },
     { title: `GitHub`, href: "https://github.com/marcoscannabrava", file: "github3.png" },
@@ -17,15 +13,16 @@ const SocialMediaList = () => {
   return (
     <React.Fragment>
       {socialMedia.map((entry) => (
-        <Styled.a key={entry.title} href={entry.href}>
+        <a key={entry.title} href={entry.href}>
           <img src={entry.file} alt={entry.title} 
-            sx={{
+            style={{
               height: '40px',
-              transition: `all .2s ease-in-out`,
-              "&:hover": { transform: `scale(1.5)` }
+              transition: `all .2s ease-in-out`
             }}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.5)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
           />
-        </Styled.a>
+        </a>
       ))}
     </React.Fragment>
   )

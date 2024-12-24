@@ -8,8 +8,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-theme-ui`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-yaml`,
     `gatsby-transformer-remark`,

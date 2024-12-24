@@ -1,9 +1,8 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
-import React, { useState, useEffect, useRef, Fragment } from 'react'
-import theme from '../gatsby-plugin-theme-ui'
+import { useState, useEffect, useRef } from 'react'
 import { jsx, Box } from "theme-ui"
-import { useSpring, animated, config } from "react-spring"
+import { useSpring, config } from "react-spring"
 import Header from "./header"
 import Footer from "./footer"
 import ProjectCard from "./ProjectCard"
@@ -40,40 +39,40 @@ const Projects = ({ projects }: Project[]) => {
 
   const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } });
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(handleIntersection);
 
-    function handleIntersection(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) toggle(true);
-      });
-    }
+  //   function handleIntersection(entries, observer) {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) toggle(true);
+  //     });
+  //   }
 
-    const observerEntries = [aboutContainer.current];
+  //   const observerEntries = [aboutContainer.current];
 
-    observerEntries.map(div => observer.observe(div));
+  //   observerEntries.map(div => observer.observe(div));
 
-    return () => observerEntries.map(div => observer.unobserve(div));
-  }, []);
+  //   return () => observerEntries.map(div => observer.unobserve(div));
+  // }, []);
 
   return (
     <div>
       <Header />
       <Box as="main" variant="layout.main">
-        <animated.div ref={aboutContainer} style={fadeUpProps}>
+        <div ref={aboutContainer} style={fadeUpProps}>
           <AboutMe />
-        </animated.div>
+        </div>
       </Box>
       <Box as="main" variant="layout.main">
-        <div sx={{...theme.tooltipBox, width: 'fit-content'}}>
+        <div style={{ width: 'fit-content'}}>
           <h1>&laquo; &nbsp; &nbsp; Projects &nbsp; &nbsp; &raquo;</h1>
-          <div sx={theme.tooltip}>
+          <div>
             scroll projects section sideways to see more 😜 <br/>
             hover/click icons if you don't know what they are 👍
           </div>
         </div>
-        <animated.div ref={tagsContainer} style={fadeUpProps}
-          sx={{
+        <div ref={tagsContainer}
+          style={{
             display: 'flex',
             maxWidth: ['90%', '60%'], 
             flexWrap: 'wrap',
@@ -82,26 +81,26 @@ const Projects = ({ projects }: Project[]) => {
           }}>
           {projs.allFile.nodes.map((tag) => {
             return (
-              <div sx={theme.tooltipBox}>
-                <img key={tag.publicURL} sx={{
+              <div>
+                <img key={tag.publicURL} style={{
                   height: '40px', 
                   marginRight: '12px',
                   transition: `all .2s ease-in-out`,
-                  "&:hover": { transform: `scale(1.5)` }
+                  // "&:hover": { transform: `scale(1.5)` }
                   }} src={tag.publicURL} alt={tag.name}
                 />
-                <div sx={theme.tooltip}>{tag.name}</div>
+                <div>{tag.name}</div>
               </div>
             )})}
-        </animated.div>
-        <animated.div ref={projectsContainer} style={fadeUpProps} sx={{
+        </div>
+        <div ref={projectsContainer} style={{
           maxWidth: '100vw',
           display: 'flex',
           flexDirection: 'column',
           flexWrap: 'wrap',
           maxHeight: '1600px',
           overflowX: 'auto',
-          '::-webkit-scrollbar': { width: '0', background: 'transparent' }
+          // '::-webkit-scrollbar': { width: '0', background: 'transparent' }
           }}>
           {projs.allProjectsYaml.nodes.map((project: Project) => {
 
@@ -117,7 +116,7 @@ const Projects = ({ projects }: Project[]) => {
               <ProjectCard key={project.title} item={project} img={projImg} tags={projTags} />
             )
           })}
-        </animated.div>
+        </div>
       </Box>
       <Footer />
     </div>

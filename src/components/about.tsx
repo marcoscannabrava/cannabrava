@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import React from "react"
 import useAboutData from "../hooks/use-about-data"
 
 const Card = () => {
