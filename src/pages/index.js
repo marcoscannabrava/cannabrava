@@ -1,19 +1,98 @@
-import React from "react"
-import Projects from "../components/projects"
-import SEO from "../components/seo.tsx"
+import * as React from "react"
+import { Link, graphql } from "gatsby"
 
-// FontAwesome
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import Meta from "../components/meta"
+import Tech from "../components/tech"
+import GameOfLife from "../components/GameOfLife"
 
-library.add(fab, faExternalLinkAlt)
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const posts = data.allMarkdownRemark.nodes
 
-const IndexPage = () => (
-  <>
-    <SEO />
-    <Projects />
-  </>
-)
+  if (posts.length === 0) {
+    return (
+      <Layout location={location} title={siteTitle}>
+        <Bio />
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
+      </Layout>
+    )
+  }
 
-export default IndexPage
+  return (
+    <Layout location={location} title={siteTitle}>
+      {/* <Bio /> */}
+      <div>
+        {posts.map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+
+          return (
+            <div key={post.fields.slug}>
+              <article
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h2>
+                    <Link to={post.fields.slug} itemProp="url">
+                      <span itemProp="headline">{title}</span>
+                    </Link>
+                  </h2>
+                  <small>{post.frontmatter.date}</small>
+                </header>
+                <section className="description">
+                  <small
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    itemProp="description"
+                  />
+                </section>
+              </article>
+            </div>
+          )
+        })}
+      </div>
+      <div className="divider"></div>
+      <GameOfLife />
+    </Layout>
+  )
+}
+
+export default BlogIndex
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+export const Head = () => <Meta title="All posts" />
+
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
+      }
+    }
+  }
+`
