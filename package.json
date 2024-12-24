@@ -48,6 +48,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "add-domain": "echo 'cannabrava.co' > public/CNAME",
-    "deploy": "gatsby build --prefix-paths && yarn add-domain && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && npm run add-domain && gh-pages -d public"
   }
 }
