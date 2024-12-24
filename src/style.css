@@ -331,6 +331,17 @@ a:focus {
   transition: transform 0.2s;
 }
 
+.divider {
+  margin: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+  border-top: 1px solid var(--color-text-light);
+  opacity: 0.5;
+}
+
+article.post-list-item header {
+  margin-bottom: 0.5rem;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {

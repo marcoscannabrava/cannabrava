@@ -46,8 +46,8 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
-                <section>
-                  <p
+                <section className="description">
+                  <small
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
@@ -59,6 +59,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </div>
+      <div className="divider"></div>
       <GameOfLife />
     </Layout>
   )
