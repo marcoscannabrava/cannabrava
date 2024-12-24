@@ -5,7 +5,7 @@ import GitHubIcon from "/assets/github.svg"
 import InstagramIcon from "/assets/instagram.svg"
 import XIcon from "/assets/xtwitter.svg"
 import Email from "/assets/email.svg"
-import CV from "/assets/cv.svg"
+import Curriculum from "/assets/cv.svg"
 
 const SocialMedia = ({ size = 32 }) => {
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const SocialMedia = ({ size = 32 }) => {
         <Email style={{ height: `${size}px` }} alt="email" />
       </a>
       <a className="social-media-icon" href={social.curriculum} target="_blank" rel="noopener noreferrer" title="curriculum">
-        <CV style={{ height: `${size}px` }} alt="CV" />
+        <Curriculum style={{ height: `${size}px` }} alt="CV" />
       </a>
     </div>
   );

@@ -57,7 +57,8 @@ const BlogIndex = ({ data, location }) => {
             </div>
           )
         })}
-        <Tech />
+        {/* TODO */}
+        {/* <Tech /> */}
       </div>
     </Layout>
   )
