@@ -11,25 +11,14 @@ export default function GameOfLife() {
     const height = canvas.height;
     const gridWidth = Math.floor(width / cellSize);
     const gridHeight = Math.floor(height / cellSize);
-
     let grid = createGrid();
+    
     function createGrid() {
       return Array.from({ length: gridHeight }, () =>
         Array.from({ length: gridWidth }, () => Math.random() < 0.5)
       );
     }
-    
-    function drawGrid() {
-      ctx.clearRect(0, 0, width, height);
-      for (let y = 0; y < gridHeight; y++) {
-        for (let x = 0; x < gridWidth; x++) {
-          if (grid[y][x]) {
-            ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
-          }
-        }
-      }
-    }
-    
+        
     function countNeighbors(x, y) {
       let count = 0;
       for (let i = -1; i <= 1; i++) {
@@ -53,6 +42,11 @@ export default function GameOfLife() {
           } else {
             newGrid[y][x] = neighbors === 3;
           }
+          if (newGrid[y][x]) {
+            ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+          } else {
+            ctx.clearRect(x * cellSize, y * cellSize, cellSize, cellSize);
+          }
         }
       }
       grid = newGrid;
@@ -60,7 +54,6 @@ export default function GameOfLife() {
     
     function gameLoop() {
       updateGrid();
-      drawGrid();  
       requestAnimationFrame(gameLoop);
     }
     
@@ -69,6 +62,6 @@ export default function GameOfLife() {
 
   return <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
       <canvas id="gameCanvas" width="800" height="600"></canvas>
-      <i>Life is the eternal fight against entropy.</i>
+      <i>Life is the fight against entropy.</i>
     </div>
 }

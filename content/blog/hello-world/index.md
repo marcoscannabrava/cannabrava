@@ -9,7 +9,7 @@ description: "surfing, books, music"
 ![surfing](https://res.cloudinary.com/mpc-cloud/image/upload/c_scale,w_1808/v1585134904/marcoscannabrava_github/surf_rbypcn.jpg)
 *Sumbawa, Indonesia... more on Instagram*
 
-#### Good reads
+#### books
 * A Man's Search for Meaning by Viktor Frankl
 * Gödel, Escher, Bach: An Eternal Golden Braid by Douglas Hofstadter
 * The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson

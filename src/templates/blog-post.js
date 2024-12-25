@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Meta from "../components/meta"
+import { StaticImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -19,17 +19,26 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.date}</p>
+          </div>
+          <StaticImage
+            className="bio-avatar"
+            layout="fixed"
+            formats={["auto", "webp", "avif"]}
+            src="../images/profile_pic_vl.jpg"
+            width={50}
+            height={50}
+            quality={95}
+            alt="Profile picture"
+          />
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <nav className="blog-post-nav">
         <ul
