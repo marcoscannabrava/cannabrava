@@ -60,7 +60,7 @@ export default function GameOfLife() {
     gameLoop();
   }, []);
 
-  return <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+  return <div className="game-of-life">
       <canvas id="gameCanvas" width="800" height="600"></canvas>
       <i>Life is the fight against entropy.</i>
     </div>

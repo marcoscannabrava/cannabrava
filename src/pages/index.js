@@ -6,7 +6,9 @@ import Meta from "../components/meta"
 import GameOfLife from "../components/GameOfLife"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `Blog`
+  const siteSubTitle = data.site.siteMetadata?.author.summary || ""
+
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
@@ -22,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} subtitle={siteSubTitle}>
       <div>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -75,6 +77,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          summary
+        }
       }
     }
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {

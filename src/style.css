@@ -47,7 +47,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #001847;
+  --color-primary: #225ba5;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -247,7 +247,7 @@ a:focus {
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-8);
 }
 
 .main-heading {
@@ -256,8 +256,8 @@ a:focus {
 }
 
 .post-list-item {
-  margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-5);
+  margin-top: var(--spacing-5);
 }
 
 .post-list-item p {
@@ -344,4 +344,15 @@ article.post-list-item header {
   ol {
     list-style-position: inside;
   }
+}
+
+
+/* Custom elements */
+
+.game-of-life {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 800px;
+  margin: auto;
 }
