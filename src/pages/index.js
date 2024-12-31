@@ -70,7 +70,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Meta title="All posts" />
+export const Head = () => <Meta title="Marcos Cannabrava" />
 
 export const pageQuery = graphql`
   {
@@ -82,7 +82,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    # allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(filter: { frontmatter: { title: { eq: "Hello World" } } }) {
       nodes {
         excerpt
         fields {

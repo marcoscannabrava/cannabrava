@@ -1,4 +1,5 @@
 'use client'
+import { Link } from "gatsby";
 import React, { useEffect } from "react";
 
 export default function GameOfLife() {
@@ -62,6 +63,10 @@ export default function GameOfLife() {
 
   return <div className="game-of-life">
       <canvas id="gameCanvas" width="800" height="600"></canvas>
-      <i>Life is the fight against entropy.</i>
+      <i>
+        <Link to="golly">Life is the fight against entropy.</Link>
+        &nbsp;|&nbsp;
+        <Link to="quotes">...quotes</Link>
+      </i>
     </div>
 }
