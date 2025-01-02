@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Marcos Cannabrava RSS Feed]]></title><description><![CDATA[Software Engineer]]></description><link>https://cannabrava.co</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Dec 2024 19:38:18 GMT</lastBuildDate><item><title><![CDATA[Quotes]]></title><description><![CDATA[Simplicity vs Complexity Controlling complexity is the essence of computer programming. — Brian Wilson Kernighan Optimization hinders…]]></description><link>https://cannabrava.co/quotes/</link><guid isPermaLink="false">https://cannabrava.co/quotes/</guid><content:encoded>&lt;h3&gt;Simplicity vs Complexity&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Marcos Cannabrava RSS Feed]]></title><description><![CDATA[Software Engineer]]></description><link>https://cannabrava.co</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 02 Jan 2025 03:30:10 GMT</lastBuildDate><item><title><![CDATA[Philosophy]]></title><description><![CDATA[Wittgenstein for programmers Language, Logic, Epistemology Visual Tractatus Logico-Philosophicus]]></description><link>https://cannabrava.co/philosophy/</link><guid isPermaLink="false">https://cannabrava.co/philosophy/</guid><content:encoded>&lt;h3&gt;&lt;a href=&quot;wittgenstein&quot;&gt;Wittgenstein for programmers&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Language, Logic, Epistemology&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;wittgenstein&quot;&gt;Visual Tractatus Logico-Philosophicus&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Quotes]]></title><description><![CDATA[Simplicity vs Complexity Controlling complexity is the essence of computer programming. — Brian Wilson Kernighan Optimization hinders…]]></description><link>https://cannabrava.co/quotes/</link><guid isPermaLink="false">https://cannabrava.co/quotes/</guid><content:encoded>&lt;h3&gt;Simplicity vs Complexity&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Controlling complexity is the essence of computer programming.&lt;br&gt;
 — Brian Wilson Kernighan&lt;/p&gt;
@@ -35,6 +37,148 @@ Quantum physics thus [also] reveals a basic oneness of the universe.&lt;br&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The question of whether computers can think is just like the question of whether submarines can swim.&lt;br&gt;
 — Edsger W. Dijkstra&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Visual Wittgenstein]]></title><description><![CDATA[models of reality 1 The world is everything that is the case. 2.0201 Every statement about complexes can be analyzed into a statement about…]]></description><link>https://cannabrava.co/philosophy/wittgenstein/</link><guid isPermaLink="false">https://cannabrava.co/philosophy/wittgenstein/</guid><content:encoded>&lt;h3&gt;models of reality&lt;/h3&gt;
+&lt;p&gt;1 The world is everything that is the case.&lt;/p&gt;
+&lt;p&gt;2.0201 Every statement about complexes can be analyzed into a statement about its constituent parts, and into those propositions which completely describe the complexes.&lt;/p&gt;
+&lt;p&gt;2.021 Objects form the substance of the world. Therefore they cannot be compound.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: i.e. no dependencies, but &quot;can compose&quot; — the Democritus atom&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1194px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/799341a18a598d363e55246939487114/187fa/wittgenstein.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABv0lEQVR42mVQz2sTQRjdgoi/qhKQHvS4EMglV8nFvyJnbzlEqlUveioo6En8B7x48FdRwYJCwYOgRVqbSNftxsa6bDZ2E7O7s7M7uzubyUw+JyOItA8e78338T0eo3me13Ac556P/FvDYHS9KNgNzpjUYinLsmsAMOPVH469GAS/F6W/InnTdb1LmoT0c9r/YIwZcggxScTt+3dhhMPZE4QQSvuDfWiZBqy3WxDgCD5+2RDD0AdC8i15fuJQKOdcBQaETqyfNveTlKcs5+OJ4HLM/TDgO7bL11tbfEfuN83vbIQQJEnWrtVq89pBkJR0QpIDZX8rEcoBU6EoxPRf05V3b+GrZanyqgCKjMvLy8cWFrST1Wr1rIw6UqlUjmpPX6107jx8ALKOyAs2U2h3dmGvZ6ugPceGl2tr8GnbBA/F8GR1VZjdDmQZ/XaxXj9eKpVOn9f1C7qunyuXy/NaTvPuVJ3CdMK5Mo9fPIPnb14rPx6PYbb/sPkZjF0L6ISphnGSmvVG48yhP0QIP8IxIUGIBmGIhpKDCGMPRXh/5Ie/QhT18zTvt4xt1+p2e5QWDsLxwO6575vN5qkDgXN/AE7aj+XlBmnkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Wittgenstein&quot;
+        title=&quot;&quot;
+        src=&quot;/static/799341a18a598d363e55246939487114/187fa/wittgenstein.png&quot;
+        srcset=&quot;/static/799341a18a598d363e55246939487114/5a46d/wittgenstein.png 300w,
+/static/799341a18a598d363e55246939487114/0a47e/wittgenstein.png 600w,
+/static/799341a18a598d363e55246939487114/187fa/wittgenstein.png 1194w&quot;
+        sizes=&quot;(max-width: 1194px) 100vw, 1194px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2.202 The picture represents a possible state of affairs in the logical space.&lt;/p&gt;
+&lt;p&gt;2.225 There is no picture which is &lt;em&gt;a priori&lt;/em&gt; true.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: &lt;a href=&quot;https://www.lesswrong.com/posts/KJ9MFBPwXGwNpadf2/skill-the-map-is-not-the-territory&quot;&gt;The Map is Not the Territory&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3.02 [...] What is thinkable is also possible.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: Was LW a techno-optimist? :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3.11 We use the perceptible sign (sound or written sign, etc) of the proposition as a projections of the possible state of affairs.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: So we come full-circle. From reality is derived the model, which through language makes it way back into reality.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3.3 Only the proposition has sense; only in the context of a proposition has a name meaning.&lt;/p&gt;
+&lt;h3&gt;interlude: cruft, bloat, complexity&lt;/h3&gt;
+&lt;p&gt;3.34 A proposition possesses essential and accidental features.
+&lt;br/&gt;
+Accidental are the features which are due to a particular way of producing the propositional sign. Essential are those which alone enable the proposition to express its sense.&lt;/p&gt;
+&lt;p&gt;3.341 The essential in a proposition is therefore that which is common to all propositions which can express the same sense.
+&lt;br/&gt;
+And in the same way in general the essential in a symbol is that which all symbols which can fulfil the same purpose have in common.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: &lt;a href=&quot;https://en.wikipedia.org/wiki/No_Silver_Bullet&quot;&gt;No Silver Bullet&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;domain models, bounded contexts&lt;/h3&gt;
+&lt;p&gt;4.026 The meanings of the simple signs (the words) must be explained to us, if we are to understand them.
+&lt;br/&gt;
+But propositions are self-explanatory.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: Code (modules) should be self-explanatory. Classes, objects, variables, not necessarily.
+The whole of a domain — a publicly exposed API — should be of an &quot;intuitive&quot;, self-explanatory nature.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;4.03 [...] The proposition communicates to us a state of affairs, therefore it must be essentially connected with the state of affairs. [...]&lt;/p&gt;
+&lt;p&gt;4.06 Propositions can be true or false only by being pictures of the reality.&lt;/p&gt;
+&lt;h3&gt;logic&lt;/h3&gt;
+&lt;p&gt;5 Propositions are truth-functions of elementary propositions.
+&lt;br/&gt;
+(An elementary proposition is a truth-function of itself.)&lt;/p&gt;
+&lt;h3&gt;epistemology&lt;/h3&gt;
+&lt;p&gt;5.551 Our fundamental principle is that &lt;strong&gt;every question which can be decided at all by logic can be decided off-hand&lt;/strong&gt;.
+&lt;br/&gt;
+(And &lt;strong&gt;if we get into a situation where we need to answer such a problem by looking at the world, this shows that we are on a fundamentally wrong track.&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;5.6 &lt;strong&gt;The limits of my language mean the limits of my world.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: banger 💥&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6.13 Logic is not a theory but a reflection of the world.
+&lt;br/&gt;
+Logic is transcendental.&lt;/p&gt;
+&lt;p&gt;6.2 Mathematics is a logical method.
+&lt;br/&gt;
+The propositions of mathematics are equations, and therefore pseudo-propositions.&lt;/p&gt;
+&lt;p&gt;6.3 Logical research means the investigation of all regularity. And outside logic all is accident.&lt;/p&gt;
+&lt;p&gt;6.373 The world is independent of my will.&lt;/p&gt;
+&lt;p&gt;6.421 It is clear that ethics cannot be expressed.
+&lt;br/&gt;
+Ethics is transcendental.
+&lt;br/&gt;
+(Ethics and aesthetics are one.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: we can sense a turn of events coming...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;take a big breath&lt;/h3&gt;
+&lt;p&gt;6.4311 Death is not an event of life. Death is not lived through.
+&lt;br/&gt;
+If by eternity is understood not endless temporal duration but timelessness, then he lives eternally who lives in the present.
+&lt;br/&gt;
+Our life is endless in the way that our visual field is without limit.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: WTF. How did we get here?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6.4312 The temporal immortality of the human soul, that is to say, its eternal survival after death, is not only in no way guaranteed, but this assumption in the first place will not do for us what we always tried to make it do. Is a riddle solved by the fact that I survive for ever? Is this eternal life not as enigmatic as our present one? The solution of the riddle of life in space and time lies outside space and time.
+&lt;br/&gt;
+(It is not problems of natural science which have to be solved.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: 🤯&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6.4321 The facts all belong only to the task and not to its performance.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: 🍄&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6.5 For an answer which cannot be expressed the question too cannot be expressed.
+&lt;br/&gt;
+The riddle does not exist.
+&lt;br/&gt;
+If a question can be put at all, then it can also be answered.&lt;/p&gt;
+&lt;p&gt;6.51 [...] For doubt can only exist where there is a question; a question only where there is an answer, and this only where something can be said.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: 🤔&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6.52 We feel that &lt;strong&gt;even if all possible scientific questions be answered, the problems of life have still not been touched at all. Of course there is then no question left, and just this is the answer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;6.521 &lt;strong&gt;The solution of the problem of life is seen in the vanishing of this problem.&lt;/strong&gt;
+&lt;br/&gt;
+(Is not this the reason why men to whom after long doubting the sense of life became clear, could not then say wherein this sense consisted?)&lt;/p&gt;
+&lt;p&gt;6.522 There is indeed the inexpressible. This shows itself; it is the mystical.&lt;/p&gt;
+&lt;p&gt;6.53 &lt;strong&gt;The right method of philosophy would be this. To say nothing except what can be said&lt;/strong&gt;, i.e. the propositions of natural science, i.e. something that has nothing to do with philosophy: and then always, when someone else wished to say something metaphysical, to demonstrate to him that he had given no meaning to certain signs in his propositions. &lt;strong&gt;This method would be unsatisfying to the other&lt;/strong&gt; — he would not have the feeling that we were teaching him philosophy — but it would be the only strictly correct method.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: lol 🤣&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6.54 My propositions are elucidatory in this way: he who understands me finally recognizes them as senseless, when he has climbed out through them, on them, over them. (He must so to speak throw away the ladder, after he has climbed up on it.)
+&lt;br/&gt;
+He must surmount these propositions; then he sees the world rightly.&lt;/p&gt;
+&lt;p&gt;7 &lt;strong&gt;Whereof one cannot speak, thereof one must be silent.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MC: dropping the mic with this one he closes the book&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[surfing surfing
 Sumbawa, Indonesia... more on Instagram books A Man's Search for Meaning by Viktor Frankl Gödel, Escher, Bach: An Eternal…]]></description><link>https://cannabrava.co/hello-world/</link><guid isPermaLink="false">https://cannabrava.co/hello-world/</guid><pubDate>Sun, 01 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;surfing&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/mpc-cloud/image/upload/c_scale,w_1808/v1585134904/marcoscannabrava_github/surf_rbypcn.jpg&quot; alt=&quot;surfing&quot;&gt;
