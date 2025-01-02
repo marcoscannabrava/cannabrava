@@ -59,6 +59,13 @@ const BlogIndex = ({ data, location }) => {
       </div>
       <div className="divider"></div>
       <GameOfLife />
+      <i>
+        <Link to="golly">Life is the fight against entropy.</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="quotes">quotes</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="philosophy">philosophy</Link>
+      </i>
     </Layout>
   )
 }
