@@ -46,7 +46,7 @@ const Home = ({ data, location }) => {
       <div className="divider"></div>
       <GameOfLife />
       <i>
-        <Link to="golly" title="exploring celullar automata">Life is a fight against entropy.</Link>
+        <Link to="golly" title="exploring cellular automata">Life is a fight against entropy.</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <Link to="quotes">quotes</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
