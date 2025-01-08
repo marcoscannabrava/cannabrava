@@ -18,7 +18,7 @@ const GollyPage = ({ data }) => {
           <Link to="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">
             Conway's Game of Life
           </Link>{" "}
-          developed by Andrew Trevorrow, Tom Rokicki, Chris Rowett, and others.
+          developed by Andrew Trevorrow, Tom Rokicki, Chris Rowett, and others. I compiled it to WASM and put it here to play with.
         </p>
         <p style={{ marginBottom: '0', fontStyle: 'italic' }}>
           I'm in awe of both the complexity and orderliness that emerges from such simple rules.

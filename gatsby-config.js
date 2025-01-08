@@ -12,7 +12,7 @@ module.exports = {
     title: `Marcos Cannabrava`,
     author: {
       name: `Marcos Cannabrava`,
-      summary: `Software Engineer. web, ml ops, ux, infra`,
+      summary: `Software Engineer. web, small language models, ai agents, ml ops, ux, infra`,
     },
     description: `Software Engineer`,
     siteUrl: `https://cannabrava.co/`,
