@@ -1,5 +1,6 @@
 ---
 title: Stoicism
+date: "2020-01-14T00:00:00.000Z"
 description: the useful philosophy
 ---
 

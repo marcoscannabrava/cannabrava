@@ -255,10 +255,31 @@ a:focus {
   margin: 0;
 }
 
+@media (min-width: 480px) {
+  .first-row {
+    display: flex;
+    justify-content: space-between; 
+  }
+}
+
 .post-list-item {
   margin-bottom: var(--spacing-5);
   margin-top: var(--spacing-5);
 }
+
+.text-sm.post-list-item {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.text-sm * {
+  font-size: 0.9rem;
+}
+
+.text-sm small {
+  font-size: 0.7rem;
+}
+
 
 .post-list-item p {
   margin-bottom: var(--spacing-0);

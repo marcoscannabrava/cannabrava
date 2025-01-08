@@ -1,5 +1,6 @@
 ---
 title: Philosophy
+date: "2020-01-12T00:00:00.000Z"
 description: on simplicity, entropy, and others
 ---
 
