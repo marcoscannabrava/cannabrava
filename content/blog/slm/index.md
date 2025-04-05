@@ -85,7 +85,7 @@ I only put open-source models above but Gemini Flash reserves an honorable menti
 - [opencompass)](https://huggingface.co/opencompass)
 - [LLM Leaderboard 2024](https://www.vellum.ai/llm-leaderboard)
 - [SEAL LLM Leaderboards: Expert-Driven Private Evaluations](https://scale.com/leaderboard)
-
+- [Text to Image Models and Providers Leaderboard | Artificial Analysis](https://artificialanalysis.ai/text-to-image)
 
 #### resources
 

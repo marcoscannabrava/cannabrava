@@ -10,6 +10,10 @@ Language, Logic, Epistemology
 
 [Visual Tractatus Logico-Philosophicus](wittgenstein)
 
+### [More Wittgenstein](wittgenstein-2)
+
+[The programmers' philosopher](wittgenstein-2)
+
 ### [Stoicism](stoicism)
 
 The useful Philosophy
