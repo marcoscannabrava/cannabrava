@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Marcos Cannabrava RSS Feed]]></title><description><![CDATA[Software Engineer]]></description><link>https://cannabrava.co</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Apr 2025 22:15:49 GMT</lastBuildDate><item><title><![CDATA[Small Language Models (SLMs)]]></title><description><![CDATA[why Efficient to deploy, fast, and actually really good! For people who can actually architect systems of agents, it's striking me more and…]]></description><link>https://cannabrava.co/slm/</link><guid isPermaLink="false">https://cannabrava.co/slm/</guid><pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;why&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Marcos Cannabrava RSS Feed]]></title><description><![CDATA[Software Engineer]]></description><link>https://cannabrava.co</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Apr 2025 01:40:09 GMT</lastBuildDate><item><title><![CDATA[Small Language Models (SLMs)]]></title><description><![CDATA[why Efficient to deploy, fast, and actually really good! For people who can actually architect systems of agents, it's striking me more and…]]></description><link>https://cannabrava.co/slm/</link><guid isPermaLink="false">https://cannabrava.co/slm/</guid><pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;why&lt;/h4&gt;
 &lt;p&gt;Efficient to deploy, fast, and actually really good!&lt;/p&gt;
 &lt;p&gt;For people who can actually architect systems of agents, it&apos;s striking me more and more as a better alternative to calling the heavy-weights when you can get more targeted, faster, context-aware predictions with smaller and specialist models. My latest explorations with DeepSeek Coder 8B and Phi 3 left me with a really good impression of the current state of the short kings.&lt;/p&gt;
 &lt;p&gt;Some reasons I&apos;m excited.&lt;/p&gt;
@@ -112,6 +112,35 @@
 &lt;/ol&gt;
 &lt;p&gt;This approach influenced early computer science substantially, particularly in the realms of formal languages, compiler design, and first-generation AI systems. The appeal is clear — if language and reality share logical form, then programming languages could be designed to capture this form with precision and clarity. I sometimes feel like this idea is making a strong comeback in the functional programming circles through advocate of algebraic formalisms to interaction combinators.&lt;/p&gt;
 &lt;p&gt;When Wittgenstein posits that propositions mirror the world’s logical structure, acting as “pictures of facts”. Programs are nothing but executable propositions. Thus one could also say &lt;strong&gt;Wittgenstein invented Domain-Driven Design&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 520px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cc2f653e06aa730f3414741a7a08bb7b/ddb38/ludwig_risograph.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 150%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEEAgP/xAAXAQADAQAAAAAAAAAAAAAAAAABAwUE/9oADAMBAAIQAxAAAAGrG+SdNZgQIElTN4ycP//EABsQAAICAwEAAAAAAAAAAAAAAAECABEDEiIy/9oACAEBAAEFAnJpCbjMIDrEsi+maYvLCVMQ4//EABgRAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAEDAQE/AcoU/wD/xAAaEQEAAgMBAAAAAAAAAAAAAAABABEDEiEx/9oACAECAQE/AQ5VR4yj2ZE2Z//EABkQAQEBAAMAAAAAAAAAAAAAAAEREAAgYf/aAAgBAQAGPwJjyVT3Jr2//8QAHBAAAwADAQEBAAAAAAAAAAAAAAERITFBYYGh/9oACAEBAAE/IVVMTqzuCtoWwmIXoZSazwal/h2F36x59iU6K2ncbLV6f//aAAwDAQACAAMAAAAQA9Ux/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERMSH/2gAIAQMBAT8QXWkNDuD0/8QAGhEBAQACAwAAAAAAAAAAAAAAAQARUSGB8P/aAAgBAgEBPxB3c9ncRBjhncr/xAAdEAEAAgMAAwEAAAAAAAAAAAABABEhMUFRYbFx/9oACAEBAAE/EFRAq0g5aI1fLVUicPWYabuURl7rj5hgdistQm4KvpMQWy4p1xtrzEQvT+EAnpWPsv50P0zaKtT/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ludwig risograph&quot;
+        title=&quot;&quot;
+        src=&quot;/static/cc2f653e06aa730f3414741a7a08bb7b/ddb38/ludwig_risograph.jpg&quot;
+        srcset=&quot;/static/cc2f653e06aa730f3414741a7a08bb7b/f93b5/ludwig_risograph.jpg 300w,
+/static/cc2f653e06aa730f3414741a7a08bb7b/ddb38/ludwig_risograph.jpg 520w&quot;
+        sizes=&quot;(max-width: 520px) 100vw, 520px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Later Wittgenstein: &lt;strong&gt;Language Games&lt;/strong&gt; and &lt;strong&gt;Meaning as Use&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;After a hiatus from philosophy — he actually had the gumption to think he solved the entirety of philosophy as a young arrogant prick — in &lt;em&gt;Philosophical Investigations&lt;/em&gt;, he rejected the rigid picture theory in favor of a more practical, contextual understanding of language. Dude basically grew up and out of the academic ivory tower.&lt;/p&gt;
 &lt;p&gt;His new view argued that words gain meaning through their use in specific contexts or &quot;language games&quot;—practices embedded in particular forms of life. As he famously wrote, &quot;the meaning of a word is its use in the language.&quot; Under this view, understanding language requires participation in shared practices rather than abstracting formal rules.&lt;/p&gt;
@@ -142,7 +171,9 @@
 &lt;p&gt;The recent success of large language models raises fascinating questions about Wittgenstein&apos;s notion that &quot;meaning is use.&quot; These models produce seemingly meaningful output without traditional &quot;understanding&quot;.&lt;/p&gt;
 &lt;p&gt;LLMs seem to validate Wittgenstein&apos;s later view that meaning emerges from patterns of use rather than from logical picture-relationships to reality. The models don&apos;t &quot;understand&quot; in a human sense, yet they produce text that humans recognize as meaningful.&lt;/p&gt;
 &lt;p&gt;Which implies a possible conclusion that maybe it&apos;s &lt;em&gt;us&lt;/em&gt; who are just pattern-recognition machines and not &lt;em&gt;just&lt;/em&gt; them. I think I agree with this to some degree. I should leave my thoughts on God and Chardin&apos;s Omega point for another article...&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t&quot;&gt;Very interesting Stack Overflow rabbit hole that led me to these thoughts here.&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Edit 2024: &lt;a href=&quot;https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t&quot;&gt;Very interesting Stack Overflow rabbit hole that led me to these thoughts here.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2&gt;Practical Wittgensteinian Advice for Programmers&lt;/h2&gt;
 &lt;p&gt;Drawing from Wittgenstein&apos;s insights, programmers might consider these principles:&lt;/p&gt;
 &lt;ol&gt;
@@ -163,9 +194,40 @@
 &lt;p&gt;Wittgenstein&apos;s philosophical journey from logical formalism to contextual pragmatism offers a powerful framework for thinking about software development. As programmers, we often begin with a desire for logical purity and formal correctness, only to discover that real-world programming is embedded in social practices, evolving contexts, and specific purposes.&lt;/p&gt;
 &lt;p&gt;By recognizing programming as a collection of language games rather than a single formal system, we can approach our craft with greater humility, flexibility, and effectiveness. Wittgenstein teaches us that meaning emerges not from abstract definitions but from concrete use—a lesson as valuable in writing code as it is in natural language.&lt;/p&gt;
 &lt;p&gt;In an age where AI systems like large language models both validate and challenge Wittgenstein&apos;s insights, his philosophy might give us insight into whether it&apos;s &quot;machines that also think&quot; or &quot;humans that just process&quot;. Perhaps we might say that to be a good programmer is not to know all the rules, but to play the code game well.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 560px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8969fc028797ebcecb994b6a9c6067a0/9342c/ludwig_stencil.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 150%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDAf/EABcBAQEBAQAAAAAAAAAAAAAAAAIBAAT/2gAMAwEAAhADEAAAAYjfPmfA9KM5eoJf/8QAHBAAAgEFAQAAAAAAAAAAAAAAAQIAAxAREjJB/9oACAEBAAEFAsEkhlMp9P3FbBq422M8t//EABYRAQEBAAAAAAAAAAAAAAAAABARIf/aAAgBAwEBPwG6Q//EABcRAQEBAQAAAAAAAAAAAAAAABEQISL/2gAIAQIBAT8BeiGs/8QAGxAAAQQDAAAAAAAAAAAAAAAAEQABECAhIkH/2gAIAQEABj8CDLMB+yVrX//EAB0QAAICAwADAAAAAAAAAAAAAAERACEQMVFBYdH/2gAIAQEAAT8hAJQJ7Kvo4SgxSCKpYJ6Jmgm9iJ8w7Doc+Y//2gAMAwEAAgADAAAAEDvY/f/EABkRAAMAAwAAAAAAAAAAAAAAAAABERAhMf/aAAgBAwEBPxBcMLakR//EABgRAAMBAQAAAAAAAAAAAAAAAAABERBh/9oACAECAQE/EE/KZIQ//8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFhcRBBscH/2gAIAQEAAT8Qd2zB0MXBgYlBd3yeL6gD0gUcGhboA8Wo/MI2wGym3jjMAVR7JQIfqmqPRbv3Bcz/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ludwig stencil&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8969fc028797ebcecb994b6a9c6067a0/9342c/ludwig_stencil.jpg&quot;
+        srcset=&quot;/static/8969fc028797ebcecb994b6a9c6067a0/f93b5/ludwig_stencil.jpg 300w,
+/static/8969fc028797ebcecb994b6a9c6067a0/9342c/ludwig_stencil.jpg 560w&quot;
+        sizes=&quot;(max-width: 560px) 100vw, 560px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://slate.com/human-interest/2015/09/take-a-wittgenstein-class-he-explains-the-problems-of-translating-language-computer-science-and-artificial-intelligence.html&quot;&gt;Wittgenstein Explains Why We Always Misunderstand One Another on the Internet&lt;/a&gt;
-&lt;a href=&quot;https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t&quot;&gt;Does the success of AI (Large Language Models) support Wittgenstein&apos;s position that &quot;meaning is use&quot;?&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Stoicism]]></title><description><![CDATA[Marcus Aurelius The Philosopher-King, the last of the Five Good Emperors. The happiness of your life depends upon the quality of your…]]></description><link>https://cannabrava.co/philosophy/stoicism/</link><guid isPermaLink="false">https://cannabrava.co/philosophy/stoicism/</guid><pubDate>Tue, 14 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Marcus Aurelius&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://slate.com/human-interest/2015/09/take-a-wittgenstein-class-he-explains-the-problems-of-translating-language-computer-science-and-artificial-intelligence.html&quot;&gt;Wittgenstein Explains Why We Always Misunderstand One Another on the Internet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t&quot;&gt;Does the success of AI (Large Language Models) support Wittgenstein&apos;s position that &quot;meaning is use&quot;?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Stoicism]]></title><description><![CDATA[Marcus Aurelius The Philosopher-King, the last of the Five Good Emperors. The happiness of your life depends upon the quality of your…]]></description><link>https://cannabrava.co/philosophy/stoicism/</link><guid isPermaLink="false">https://cannabrava.co/philosophy/stoicism/</guid><pubDate>Tue, 14 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Marcus Aurelius&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The Philosopher-King, the last of the Five Good Emperors.&lt;/p&gt;
 &lt;/blockquote&gt;
