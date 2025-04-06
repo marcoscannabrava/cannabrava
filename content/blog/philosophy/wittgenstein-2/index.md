@@ -25,6 +25,8 @@ This approach influenced early computer science substantially, particularly in t
 
 When Wittgenstein posits that propositions mirror the world’s logical structure, acting as “pictures of facts”. Programs are nothing but executable propositions. Thus one could also say **Wittgenstein invented Domain-Driven Design**.
 
+![](./ludwig_risograph.jpg)
+
 ## Later Wittgenstein: **Language Games** and **Meaning as Use**
 
 After a hiatus from philosophy — he actually had the gumption to think he solved the entirety of philosophy as a young arrogant prick — in *Philosophical Investigations*, he rejected the rigid picture theory in favor of a more practical, contextual understanding of language. Dude basically grew up and out of the academic ivory tower.
@@ -70,7 +72,7 @@ LLMs seem to validate Wittgenstein's later view that meaning emerges from patter
 
 Which implies a possible conclusion that maybe it's *us* who are just pattern-recognition machines and not *just* them. I think I agree with this to some degree. I should leave my thoughts on God and Chardin's Omega point for another article...
 
-[Very interesting Stack Overflow rabbit hole that led me to these thoughts here.](https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t)
+> Edit 2024: [Very interesting Stack Overflow rabbit hole that led me to these thoughts here.](https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t)
 
 ## Practical Wittgensteinian Advice for Programmers
 
@@ -92,8 +94,9 @@ By recognizing programming as a collection of language games rather than a singl
 
 In an age where AI systems like large language models both validate and challenge Wittgenstein's insights, his philosophy might give us insight into whether it's "machines that also think" or "humans that just process". Perhaps we might say that to be a good programmer is not to know all the rules, but to play the code game well.
 
+![](./ludwig_stencil.jpg)
 
 # References
 
-[Wittgenstein Explains Why We Always Misunderstand One Another on the Internet](https://slate.com/human-interest/2015/09/take-a-wittgenstein-class-he-explains-the-problems-of-translating-language-computer-science-and-artificial-intelligence.html)
-[Does the success of AI (Large Language Models) support Wittgenstein's position that "meaning is use"?](https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t)
+- [Wittgenstein Explains Why We Always Misunderstand One Another on the Internet](https://slate.com/human-interest/2015/09/take-a-wittgenstein-class-he-explains-the-problems-of-translating-language-computer-science-and-artificial-intelligence.html)
+- [Does the success of AI (Large Language Models) support Wittgenstein's position that "meaning is use"?](https://philosophy.stackexchange.com/questions/112021/does-the-success-of-ai-large-language-models-support-wittgensteins-position-t)
