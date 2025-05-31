@@ -4,8 +4,6 @@ date: "2025-05-30T00:00:00.000Z"
 description: "why re-use time-tested software when you can raw-dog it with nothing but your compiler and cojones?"
 ---
 
-# Frameworks: Standing on the Shoulders of Giants or Complexity Monster?
-
 Few decisions spark as much online flame wars as the "frameworks vs. raw-dogging" debate. Should you stand on the shoulders of giants? Or should you raw-dog it like Carmack and Notch, building from first principles with nothing but your compiler and cojones?
 
 This isn't just a technical decision. For some, it defines your worth as a programmer. Are you only a cracked dev if you build everything from scratch? Are framework users all n00bs?
