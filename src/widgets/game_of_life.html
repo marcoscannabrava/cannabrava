@@ -1,0 +1,39 @@
+<canvas id="game-of-life" width="800" height="800"></canvas>
+<script src="build/game_of_life.js"></script>
+<script>
+Module.onRuntimeInitialized = () => {
+  const width = Module.ccall('get_width', 'number');
+  const height = Module.ccall('get_height', 'number');
+  const gridPtr = Module.cwrap('get_grid', 'number', []);
+  const step = Module.cwrap('step', null, []);
+  const init_grid = Module.cwrap('init_grid', null, []);
+
+  const canvas = document.getElementById('life');
+  const ctx = canvas.getContext('2d');
+  const scale = canvas.width / width;
+
+  init_grid();
+
+  function render() {
+    const ptr = gridPtr();
+    const grid = new Uint8Array(Module.HEAPU8.buffer, ptr, width * height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        if (grid[y * width + x]) {
+          ctx.fillRect(x * scale, y * scale, scale, scale);
+        }
+      }
+    }
+  }
+
+  function loop() {
+    step();
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  render();
+  loop();
+};
+</script>
