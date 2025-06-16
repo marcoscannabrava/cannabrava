@@ -48,6 +48,5 @@ void step() {
 // Get a pointer to the grid for rendering
 uint8_t* get_grid() { return grid; }
 
-// Optionally, expose width and height
 int get_width() { return WIDTH; }
 int get_height() { return HEIGHT; }
