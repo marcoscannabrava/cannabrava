@@ -372,8 +372,8 @@ article.post-list-item header {
 
 .game-of-life {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 800px;
-  margin: auto;
+  justify-content: center;
+}
+.game-of-life > canvas {
+  border: .2rem solid black;
 }

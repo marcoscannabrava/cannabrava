@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Layout from "../components/layout";
-import Meta from "../components/meta";
-import GameOfLife from "../components/GameOfLife";
+import Layout from "../components/layout"
+import Meta from "../components/meta"
 
 function Post({ post, small }) {
   return <div>
@@ -44,7 +43,10 @@ const Home = ({ data, location }) => {
         </div>
       </div>
       <div className="divider"></div>
-      <GameOfLife />
+      <div id="game-of-life" className="game-of-life">
+        <canvas id="life" width="600" height="600" style={{ height: "600px", width: "600px" }} />
+        <script src="/gol.js" />
+      </div>
       <i>
         <Link to="golly" title="exploring cellular automata">Life is a fight against entropy.</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;

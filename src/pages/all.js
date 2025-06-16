@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Meta from "../components/meta";
-import GameOfLife from "../components/GameOfLife";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Blog`;
