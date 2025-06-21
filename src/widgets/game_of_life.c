@@ -5,13 +5,15 @@
 #define WIDTH 64
 #define HEIGHT 64
 
-static uint8_t grid[WIDTH * HEIGHT];
-static uint8_t next_grid[WIDTH * HEIGHT];
+static uint8_t grid[HEIGHT][WIDTH];
+static uint8_t next_grid[HEIGHT][WIDTH];
 
 // Initialize the grid with random values
 void init_grid() {
-    for (int i = 0; i < WIDTH * HEIGHT; i++) {
-        grid[i] = rand() % 2;
+    for (int y = 0; y < HEIGHT; y++) {
+        for (int x = 0; x < WIDTH; x++) {
+            grid[y][x] = rand() % 2;
+        }
     }
 }
 
@@ -23,7 +25,7 @@ static int count_neighbors(int x, int y) {
             if (dx == 0 && dy == 0) continue;
             int nx = (x + dx + WIDTH) % WIDTH;
             int ny = (y + dy + HEIGHT) % HEIGHT;
-            count += grid[ny * WIDTH + nx];
+            count += grid[ny][nx];
         }
     }
     return count;
@@ -34,19 +36,18 @@ void step() {
     for (int y = 0; y < HEIGHT; y++) {
         for (int x = 0; x < WIDTH; x++) {
             int neighbors = count_neighbors(x, y);
-            int idx = y * WIDTH + x;
-            if (grid[idx]) {
-                next_grid[idx] = (neighbors == 2 || neighbors == 3) ? 1 : 0;
+            if (grid[y][x]) {
+                next_grid[y][x] = (neighbors == 2 || neighbors == 3) ? 1 : 0;
             } else {
-                next_grid[idx] = (neighbors == 3) ? 1 : 0;
+                next_grid[y][x] = (neighbors == 3) ? 1 : 0;
             }
         }
     }
-    memcpy(grid, next_grid, WIDTH * HEIGHT);
+    memcpy(grid, next_grid, sizeof(grid));
 }
 
 // Get a pointer to the grid for rendering
-uint8_t* get_grid() { return grid; }
+uint8_t* get_grid() { return &grid[0][0]; }
 
 int get_width() { return WIDTH; }
 int get_height() { return HEIGHT; }
