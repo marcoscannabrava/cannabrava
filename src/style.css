@@ -333,6 +333,25 @@ article.post-list-item header {
   margin-bottom: 0.5rem;
 }
 
+.home-top {
+  display: flex;
+  gap: var(--spacing-8);
+  align-items: flex-start;
+}
+
+.home-intro {
+  flex: 1;
+}
+
+.home-links {
+  flex: 0 0 12rem;
+  margin-top: var(--spacing-5);
+}
+
+.home-links p {
+  margin-bottom: var(--spacing-4);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -343,6 +362,14 @@ article.post-list-item header {
   ul,
   ol {
     list-style-position: inside;
+  }
+  .home-top {
+    flex-direction: column;
+    gap: 0;
+  }
+  .home-links {
+    flex-basis: auto;
+    margin-top: 0;
   }
 }
 
