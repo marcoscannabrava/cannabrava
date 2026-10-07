@@ -1,6 +1,5 @@
 ---
 title: Hello World
-date: "2019-12-01T00:00:00.000Z"
 description: "surfing, books, music"
 ---
 

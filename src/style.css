@@ -27,9 +27,9 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "Ubuntu", system-ui, -apple-system;
-  --font-body: var(--fontFamily-sans);
-  --font-heading: var(--fontFamily-sans);
+  --fontFamily-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --font-body: var(--fontFamily-mono);
+  --font-heading: var(--fontFamily-mono);
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
   --fontWeight-black: 900;
@@ -49,7 +49,7 @@
   --fontSize-7: 2.986rem;
   --color-primary: #225ba5;
   --color-text: #2e353f;
-  --color-text-light: #4f5969;
+  --color-text-light: #6b7380;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
@@ -64,7 +64,7 @@
 }
 
 html {
-  background-color: #dadada;
+  background-color: #f4f3ef;
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
@@ -333,24 +333,6 @@ article.post-list-item header {
   margin-bottom: 0.5rem;
 }
 
-.home-top {
-  display: flex;
-  gap: var(--spacing-8);
-  align-items: flex-start;
-}
-
-.home-intro {
-  flex: 1;
-}
-
-.home-links {
-  flex: 0 0 12rem;
-  margin-top: var(--spacing-5);
-}
-
-.home-links p {
-  margin-bottom: var(--spacing-4);
-}
 
 /* Media queries */
 
@@ -363,23 +345,67 @@ article.post-list-item header {
   ol {
     list-style-position: inside;
   }
-  .home-top {
-    flex-direction: column;
-    gap: 0;
-  }
-  .home-links {
-    flex-basis: auto;
-    margin-top: 0;
-  }
 }
 
 
 /* Custom elements */
 
-.game-of-life {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 800px;
-  margin: auto;
+
+.life-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.07;
+  z-index: -2;
+}
+
+.home {
+  position: relative;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 22vh var(--spacing-5) var(--spacing-12);
+  font-size: 0.95rem;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 15vh -2rem 0;
+  background: radial-gradient(closest-side, #f4f3ef 70%, transparent);
+  z-index: -1;
+}
+
+.home h1,
+.home h2 {
+  font-size: 1rem;
+  font-weight: var(--fontWeight-bold);
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.home h2 {
+  margin-top: var(--spacing-8);
+  font-weight: var(--fontWeight-normal);
+}
+
+.home p {
+  margin: 0 0 var(--spacing-6);
+  line-height: var(--lineHeight-normal);
+}
+
+.home .index {
+  list-style: none;
+  margin: 0;
+}
+
+.home .index li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  margin: 0;
+  padding: 0.15rem 0;
+}
+
+.muted {
+  color: var(--color-text-light);
 }

@@ -1,136 +1,102 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import Meta from "../components/meta"
 import GameOfLife from "../components/GameOfLife"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Blog`
-  const siteSubTitle = data.site.siteMetadata?.author.summary || ""
+const HIDDEN = ["/hello-world/", "/philosophy/"]
 
+const Home = ({ data }) => {
+  const { author, social } = data.site.siteMetadata
   const posts = data.allMarkdownRemark.nodes
-  const latest = data.latest.nodes[0]
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
+    .filter(post => !HIDDEN.includes(post.fields.slug))
+    .sort(
+      (a, b) =>
+        (b.frontmatter.date || "").localeCompare(a.frontmatter.date || "") ||
+        a.frontmatter.title.localeCompare(b.frontmatter.title)
     )
-  }
+
+  const elsewhere = [
+    ["github", social.github],
+    ["linkedin", social.linkedin],
+    ["x", social.xtwitter],
+    ["instagram", social.instagram],
+    ["email", social.email],
+    ["cv", social.curriculum],
+  ]
 
   return (
-    <Layout location={location} title={siteTitle} subtitle={siteSubTitle}>
-      <div className="home-top">
-        <div className="home-intro">
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
-
-            return (
-              <div key={post.fields.slug}>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <header>
-                    <h2>
-                      <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                      </Link>
-                    </h2>
-                    <small>{post.frontmatter.date}</small>
-                  </header>
-                  <section className="description">
-                    <small
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-              </div>
-            )
-          })}
-        </div>
-        <aside className="home-links">
-          {latest && (
-            <p>
-              <small>Latest</small>
-              <br />
-              <Link to={latest.fields.slug}>{latest.frontmatter.title}</Link>
-            </p>
-          )}
-          <p>
-            <Link to="/posts">All posts →</Link>
-          </p>
-        </aside>
-      </div>
-      <div className="divider"></div>
+    <>
       <GameOfLife />
-      <i>
-        <Link to="golly">Life is the fight against entropy.</Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to="quotes">quotes</Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to="philosophy">philosophy</Link>
-      </i>
-    </Layout>
+      <main className="home">
+        <h1>{author.name}</h1>
+        <p className="muted">{author.summary.toLowerCase()}.</p>
+        <p>
+          I surf, read, and build tools.{" "}
+          <Link to="/hello-world/">More about me →</Link>
+        </p>
+
+        <h2>writing</h2>
+        <ul className="index">
+          {posts.map(post => (
+            <li key={post.fields.slug}>
+              <span className="muted">{post.frontmatter.month || "notes"}</span>
+              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+            </li>
+          ))}
+          <li>
+            <span className="muted">toy</span>
+            <Link to="/golly">Game of Life</Link>
+          </li>
+        </ul>
+
+        <h2>elsewhere</h2>
+        <p>
+          {elsewhere.map(([label, href], i) => (
+            <React.Fragment key={label}>
+              {i > 0 && <span className="muted"> · </span>}
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {label}
+              </a>
+            </React.Fragment>
+          ))}
+        </p>
+      </main>
+    </>
   )
 }
 
-export default BlogIndex
+export default Home
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Meta title="Marcos Cannabrava" />
 
 export const pageQuery = graphql`
   {
     site {
       siteMetadata {
-        title
         author {
+          name
           summary
         }
-      }
-    }
-    # allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-    allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "Hello World" } } }
-    ) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
+        social {
+          github
+          linkedin
+          xtwitter
+          instagram
+          email
+          curriculum
         }
       }
     }
-    latest: allMarkdownRemark(
-      filter: { frontmatter: { date: { ne: null } } }
-      sort: { frontmatter: { date: DESC } }
-      limit: 1
-    ) {
+    allMarkdownRemark {
       nodes {
         fields {
           slug
         }
         frontmatter {
           title
+          date
+          month: date(formatString: "YYYY-MM")
         }
       }
     }
