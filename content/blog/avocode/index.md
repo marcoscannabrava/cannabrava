@@ -6,7 +6,7 @@ description: "An agent harness that focuses on improving a single metric"
 
 ## An agent harness that focuses on improving a single metric
 
-Inspired by NVIDIA's [AVO: Agentic Variation Operators](https://github.com/marcoscannabrava/avocode/blob/main/docs/avo-paper.md) where they let an agent evolve attention kernels on B200 GPUs for 7 days and it beat cuDNN and FlashAttention-4.
+Inspired by NVIDIA's [AVO: Agentic Variation Operators](https://github.com/marcoscannabrava/avocode_v1/blob/main/docs/avo-paper.md) where they let an agent evolve attention kernels on B200 GPUs for 7 days and it beat cuDNN and FlashAttention-4.
 
 Using `avocode` you write one script that measures your code, the agent tweaks the code and creates a graph of the strategies and hypotheses, experimenting, and keeping the improved versions.&#32;
 
@@ -138,3 +138,5 @@ The skills are plain markdown in the [Agent Skills](https://agentskills.io/speci
 - Population branching, which the AVO paper also leaves as future work.
 
 `avocode` itself was developed with my version of a [ralph loop](https://github.com/marcoscannabrava/ralph).
+
+Edit: I have a new version of avocode, performing a lot better than this one — it's crushing ARC-AGI 3 but results are preliminary. I'll write a post someday.
